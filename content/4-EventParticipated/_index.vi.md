@@ -29,4 +29,16 @@ pre: " <b> 4. </b> "
 
  **Vai trò:** Người tham dự
 
+---
+
+### [Event 3](4.3-Event3/)
+
+ **Tên sự kiện:** FCAJ Community Day - Data Driven, AI Risen
+
+ **Thời gian:** 09:00 – 12:00, Thứ Bảy, ngày 27 tháng 6 năm 2026
+
+ **Địa điểm:** Tầng 26 & 36, Tòa nhà Bitexco Financial Tower, TP. Hồ Chí Minh
+
+ **Vai trò:** Người tham dự
+
 
