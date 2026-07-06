@@ -6,39 +6,33 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
+### [Event 1 — FCAJ Community Day – Conference Call](4.1-Event1/)
+&emsp;**Tên sự kiện:** FCAJ Community Day – Conference Call
 
-### [Event 1](4.1-Event1/)
+&emsp;**Thời gian:** 09:00 – 12:00, Thứ Bảy, 23/05/2026
 
- **Tên sự kiện:** Hội thảo AI/ML/GenAI trên AWS
+&emsp;**Địa điểm:** AWS Vietnam Office, TP. Hồ Chí Minh
 
- **Thời gian:** 8:30 – 12:00, Thứ Bảy, ngày 15 tháng 11 năm 2025
-
- **Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Trieu, Phường Saigon, TP. Hồ Chí Minh
-
- **Vai trò:** Người tham dự
+&emsp;**Vai trò:** Người tham dự
 
 ---
 
-### [Event 2](4.2-Event2/)
+### [Event 2 — AWS Meetup: First Cloud AI Journey](4.2-Event2/)
+&emsp;**Tên sự kiện:** AWS Meetup - First Cloud AI Journey
 
- **Tên sự kiện:** DevOps trên AWS
+&emsp;**Thời gian:** 09:00 – 12:00, Thứ Bảy, 13/06/2026
 
- **Thời gian:** 8:30 – 17:00, Thứ Hai, ngày 17 tháng 11 năm 2025
+&emsp;**Địa điểm:** Offline Meetup, TP. Hồ Chí Minh
 
- **Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Trieu, Phường Saigon, TP. Hồ Chí Minh
-
- **Vai trò:** Người tham dự
+&emsp;**Vai trò:** Người tham dự
 
 ---
 
-### [Event 3](4.3-Event3/)
+### [Event 3 — FCAJ Community Day - Data Driven, AI Risen](4.3-Event3/)
+&emsp;**Tên sự kiện:** FCAJ Community Day - Data Driven, AI Risen
 
- **Tên sự kiện:** FCAJ Community Day - Data Driven, AI Risen
+&emsp;**Thời gian:** 09:00 – 12:00, Thứ Bảy, 27/06/2026
 
- **Thời gian:** 09:00 – 12:00, Thứ Bảy, ngày 27 tháng 6 năm 2026
+&emsp;**Địa điểm:** Tầng 26 & 36, Bitexco Financial Tower, TP. Hồ Chí Minh
 
- **Địa điểm:** Tầng 26 & 36, Tòa nhà Bitexco Financial Tower, TP. Hồ Chí Minh
-
- **Vai trò:** Người tham dự
-
-
+&emsp;**Vai trò:** Người tham dự
