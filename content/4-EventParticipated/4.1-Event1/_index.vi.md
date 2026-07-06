@@ -1,27 +1,29 @@
 ---
-title: "AI/ML/GenAI on AWS Workshop"
-date: "2025-11-15"
+title: "FCAJ Community Day – Conference Call"
+date: "2026-05-23"
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Summary Report: “AI/ML/GenAI on AWS Workshop”
+# Summary Report: FCAJ Community Day – Conference Call
 
-### Event Objectives
+## Event Objectives
 
-- Giới thiệu tổng quan về hệ sinh thái **AI/ML/GenAI trên AWS**.  
-- Hướng dẫn sử dụng **Amazon SageMaker** cho toàn bộ vòng đời Machine Learning.  
-- Cung cấp kiến thức nền tảng và thực hành về **Generative AI** thông qua Amazon Bedrock.  
-- Tạo cơ hội networking giữa sinh viên và chuyên gia AWS.  
-- Định hướng xu hướng AI/ML tại Việt Nam cùng các kỹ năng cần thiết để tham gia ngành.
+- **Hạ tầng và Chi phí:** Chuyển đổi mô hình thanh toán CloudFront sang giá cố định (Flat-rate) và tối ưu hóa hiệu suất mạng
+- **Phát triển Sản phẩm AI:** Hành trình 36 giờ xây dựng công cụ tạo UI thông minh (UTMorpho)
+- **Độ tin cậy của AI:** Giải mã tính không định hình của LLM và các chiến lược giảm thiểu sai số
+- **Kỹ thuật Ngữ cảnh:** Tầm quan trọng của việc cung cấp dữ liệu đầu vào chất lượng hơn là số lượng
+- **Tự động hóa và Chấm điểm Tín dụng:** Ứng dụng hệ thống đa tác vụ (Multi-Agent) để xử lý dữ liệu phức tạp và tự động hóa quy trình kinh doanh
 
 ---
 
-### Agenda Overview
+## Agenda Overview
 
-**Thời gian:** 8:30 AM – 12:00 PM, Thứ Bảy ngày 15/11/2025  
-**Địa điểm:** AWS Vietnam Office  
+| | |
+|---|---|
+| **Thời gian** | 9:00 AM – 12:00 PM, Thứ Bảy, 23/05/2026 |
+| **Địa điểm** | AWS Vietnam Office |
 
 ---
 
@@ -29,162 +31,124 @@ pre: " <b> 4.1. </b> "
 
 ### 1. Welcome & Introduction (8:30 – 9:00 AM)
 
-- Check-in và networking giữa người tham dự.  
-- Giới thiệu mục tiêu, nội dung trọng tâm.  
-- Hoạt động ice-breaker gắn kết nhóm.  
-- Tổng quan về xu hướng AI/ML tại Việt Nam.
+- Check-in và networking
+- Giới thiệu mục tiêu, nội dung trọng tâm
+
+### 2. Context Is Everything: Making AI Actually Work for You (9:00 – 09:30 AM)
+
+#### Bản chất của Context
+
+Context không chỉ là thông tin bổ sung — nó là "thông tin giúp AI hiểu được nhiệm vụ đằng sau nhiệm vụ". Bốn yếu tố cốt lõi:
+
+| Yếu tố | Mô tả |
+|---|---|
+| **Goal (Mục tiêu)** | Kết quả cuối cùng bạn thực sự mong muốn |
+| **Situation (Tình huống)** | Bạn là ai, thời hạn hoàn thành |
+| **Constraints (Ràng buộc)** | Tech stack, phong cách, ngân sách, định dạng |
+| **Evidence (Bằng chứng)** | Mã nguồn, tài liệu, ví dụ, yêu cầu cụ thể |
+
+#### Tại sao AI thất bại khi thiếu context?
+
+- AI không thể đọc suy nghĩ — nó cần bạn nói rõ mục tiêu
+- Phản hồi chung chung hoặc sai hướng do input kém
+- Quá rườm rà hoặc vi phạm ràng buộc vì không được thiết lập giới hạn từ đầu
+
+#### Ba sai lầm phổ biến
+
+1. **"Internet Puller"** — Sao chép toàn bộ bài báo, PDF, ảnh chụp màn hình vào chat. Hệ quả: AI bị xao nhãng, giảm độ chính xác, tăng chi phí token
+2. **Nói điều AI đã biết** — Cung cấp thông tin hiển nhiên. Thay vào đó, hãy nói điều quan trọng tiếp theo
+3. **Thiếu mục tiêu và ràng buộc** — Lệnh mơ hồ "Xây dựng cho tôi một website" nhận câu trả lời mơ hồ
+
+#### Sự tiến hóa của hệ thống context
+
+| Giai đoạn | Mô tả |
+|---|---|
+| **Prompt** | Câu hỏi đơn lẻ, không trạng thái |
+| **Context** | Kết hợp tài liệu bổ trợ |
+| **Memory** | Cá nhân hóa theo thời gian ("bộ não AI thứ hai") |
+
+#### Framework cung cấp context tốt
+
+1. Xác định mục tiêu: AI nên giúp bạn đạt được điều gì?
+2. Lọc thông tin liên quan: Chỉ cung cấp dữ liệu thực sự cần thiết
+3. Thiết lập ràng buộc: Công nghệ, thời gian, phong cách
+4. Tiêu chí thành công: Một câu trả lời tốt trông như thế nào?
+
+> Context không phải thông tin bổ sung — context chính là trải nghiệm sản phẩm. Context Engineering đang trở thành kỹ năng cốt lõi.
 
 ---
 
-### 2. AWS AI/ML Services Overview (9:00 – 10:30 AM)
+### 3. Broadening the Cloud Horizon (09:30 AM – 12:00 PM)
 
-Buổi workshop giới thiệu **toàn bộ hệ sinh thái AI Services của AWS**, bao gồm các dịch vụ AI “dùng ngay” (Pre-trained APIs) và các công cụ hỗ trợ phân tích dữ liệu đa phương tiện.
+#### Tự động hóa quy trình kinh doanh với Amazon Quick Suite
 
-## **1. AI Services (Pre-trained APIs – xử lý trực tiếp không cần training)**  
-Đây là lớp dịch vụ AI fully managed cho các tác vụ nhận dạng, phân tích, xử lý ngôn ngữ và đa phương tiện.
+- **Giải pháp Agentic AI:** Amazon Quick Suite giúp đơn giản hóa và tăng tốc từ dữ liệu đến hành động
+- **Hệ sinh thái dữ liệu:** Kết nối 40+ nguồn dữ liệu, database, kho dữ liệu, kết hợp Bedrock models và web search
+- **Tự động hóa:** Tạo biên bản họp (MoM), gửi email, lên lịch họp tự động
 
----
+#### Amazon CloudFront: Từ Edge đến Origin
 
-### 🔹 Computer Vision
+- **Flat-rate pricing** (ra mắt 11/2025) — dự đoán chi phí hàng tháng, tránh hóa đơn tăng đột biến
+- **Tối ưu hóa chi phí:** Miễn phí truyền dữ liệu từ origin AWS đến CloudFront; giảm tải CPU cho EC2
+- **Bảo mật & Hiệu năng:**
+  - 700+ PoPs toàn cầu giảm độ trễ
+  - TLS 1.3, mTLS, chống DDoS tại Edge
+  - HTTP/3 (QUIC) tải tài nguyên song song nhanh hơn
 
-**Amazon Rekognition**  
-- Nhận diện khuôn mặt  
-- Phân tích ảnh & video  
-- Phát hiện đối tượng, cảnh  
-- Nhận diện text trong ảnh/video (Text-in-image)  
+#### UTMorpho: Xây dựng sản phẩm tại LotusHacks
 
----
+Hành trình 36 giờ xây dựng công cụ tạo UI bằng AI với khả năng chỉnh sửa trực tiếp:
 
-### 🔹 Document AI / Text Extract
+- **Ý tưởng:** Giải quyết vấn đề các công cụ AI UI hiện tại tạo mô hình tĩnh, không thể chỉnh sửa trực tiếp. Mỗi lần re-prompt làm thay đổi toàn bộ thiết kế
+- **Tính năng chính:** Chỉnh sửa trực tiếp trên canvas (WYSIWYG), giữ nguyên thành phần không liên quan, tối ưu token consumption
+- **Bài học:** Sự thất vọng thực tế tạo ý tưởng thực tế — sự ăn ý của nhóm quan trọng hơn kỹ năng cá nhân
 
-**Amazon Textract**  
-- Trích xuất text, bảng, form từ tài liệu scan/PDF  
-- OCR nâng cao + phân tích cấu trúc  
+#### Tính phi định hình của LLM
 
-**Amazon Comprehend**  
-- NLP: xử lý ngôn ngữ tự nhiên  
-- Sentiment analysis  
-- Entity recognition  
-- Keyphrase extraction  
-- Topic modeling  
+Tại sao temperature = 0 vẫn không đảm bảo đầu ra giống hệt nhau 100%?
 
----
+- **Nguyên nhân kỹ thuật:** Phép toán floating-point trên GPU không có tính kết hợp, thứ tự thực thi song song không cố định
+- **Nguyên nhân thương mại:** Inference batching của API provider làm thay đổi tính toán mỗi request
+- **Chiến lược:** Majority voting, JSON mode, thiết kế hệ thống chấp nhận biến thiên
 
-### 🔹 Speech & Voice
+#### Multi-Agent cho chấm điểm tín dụng Startup
 
-**Amazon Transcribe**  
-- Speech → Text  
-- Tự động nhận dạng giọng nói  
-- Tách speaker, timestamp  
+Case study tại VPBank: sử dụng nhiều AI Agent để đánh giá hồ sơ vay vốn startup.
 
-**Amazon Polly**  
-- Text → Giọng nói (TTS)  
-- Nhiều giọng đọc tự nhiên (Neural TTS)  
-
----
-
-### 🔹 Chatbot & Conversation AI
-
-**Amazon Lex**  
-- Xây dựng chatbot hội thoại tự nhiên  
-- Intent classification, slot filling  
-
-**Amazon Connect Contact Lens**  
-- Phân tích hội thoại call center  
-- Sentiment, analytics  
+- **Thách thức:** Hệ thống ngân hàng truyền thống thất bại với dữ liệu startup (thiếu lịch sử tài chính 3 năm, không có tài sản thế chấp)
+- **Mô hình Multi-Agent:** Financial Analyst, Market Analyst, Team Evaluator, Risk Assessor — cùng phản biện và đưa ra kết quả đồng thuận
+- **ROI:**
+  - Giảm thời gian xử lý: 2-3 tuần → 2-4 giờ
+  - Giảm 95% chi phí mỗi quyết định tín dụng
+  - Tăng gấp đôi tỷ lệ phê duyệt nhờ đánh giá đa chiều
 
 ---
 
-### 🔹 Personalization & Recommendations
+### 4. Networking & Lucky Draw
 
-**Amazon Personalize**  
-- Gợi ý sản phẩm cá nhân hóa  
-- Công nghệ nền tảng của Amazon.com  
-
----
-
-### 🔹 Fraud Detection
-
-**Amazon Fraud Detector**  
-- Phát hiện gian lận  
-- Dự đoán hành vi bất thường  
-
----
-
-### 🔹 Forecasting & Time-series
-
-**Amazon Forecast**  
-- Dự báo nhu cầu, doanh số  
-- ML không yêu cầu kinh nghiệm thuật toán  
-
----
-
-### 🔹 Search
-
-**Amazon Kendra**  
-- Enterprise semantic search  
-- Natural language Q&A  
-
----
-
-### 🔹 Translation
-
-**Amazon Translate**  
-- Dịch thuật đa ngôn ngữ chất lượng cao  
-
----
-
-### Amazon SageMaker – ML Platform
-
-Ngoài AI Services, sự kiện cũng trình bày hệ thống chi tiết về **Amazon SageMaker**:
-
-- Data preparation & labeling  
-- Model training & tuning  
-- Deployment & monitoring  
-- Integrated MLOps pipelines  
-
-**Live Demo: SageMaker Studio**  
-- Hướng dẫn triển khai mô hình từ notebook đến endpoint.  
-
----
-
-### 3. Coffee Break (10:30 – 10:45 AM)
-
-Networking nhẹ giữa mentor và người tham dự.
-
----
-
-### 4. Generative AI with Amazon Bedrock (10:45 AM – 12:00 PM)
-
-- Giới thiệu Foundation Models: Claude, Llama, Titan  
-- Kỹ thuật Prompt Engineering & Few-shot  
-- Kiến trúc **RAG** và Knowledge Base  
-- **Bedrock Agents** cho workflow nhiều bước  
-- **Guardrails** cho ứng dụng AI an toàn  
-- **Live Demo:** Chatbot GenAI dùng Bedrock  
+- 10 lượt rút thăm trúng thưởng dành riêng cho khách mời tại tầng 36
+- Giao lưu với cộng đồng sinh viên và kỹ sư AWS
+- Thảo luận về lộ trình thi chứng chỉ Cloud, dự án Serverless và GenAI
 
 ---
 
 ## Key Takeaways
 
-### AI/ML on AWS
-- AWS cung cấp bộ AI Services đa dạng, dễ dùng và phù hợp nhiều bài toán thực tế.  
-- SageMaker giúp chuẩn hóa toàn bộ chu trình ML.  
+### AI Implementation
+Context là chìa khóa quyết định để biến mô hình ngôn ngữ thông thường thành trợ lý AI đáng tin cậy trong doanh nghiệp.
 
-### Generative AI
-- Mỗi Foundation Model có thế mạnh riêng.  
-- RAG là chìa khóa để đưa dữ liệu nội bộ vào GenAI an toàn.  
+### Career Orientation
+Ngành công nghệ đang dịch chuyển — cơ hội lớn cho nhân sự đa năng, biết viết code, có tư duy tích hợp AI và quản trị luồng dữ liệu.
 
-### Bedrock Ecosystem
-- Bedrock Agents cho phép tự động hóa quy trình.  
-- Guardrails đảm bảo an toàn khi triển khai ứng dụng AI.  
+### Community & Networking
+Tiếp xúc với chuyên gia trong hệ sinh thái AWS giúp thu hẹp khoảng cách giữa lý thuyết học thuật và bài toán kiến trúc hạ tầng thực tiễn.
 
 ---
 
-### Some event photos
-*Add your event photos here*
+## Event Photos
+
+{{< figure src="/images/bfb2481eacf02dae74e1.jpg" title="FCAJ Community Day" alt="Event photo" >}}
 
 ---
 
-> Buổi workshop mang lại góc nhìn toàn diện về AI/ML/GenAI trên AWS, đặc biệt là cách ứng dụng AI Services, SageMaker và Bedrock trong thực tế doanh nghiệp. Đây là bước đệm quan trọng giúp người tham dự tự tin bước vào lĩnh vực AI/ML.
-
+> Buổi FCAJ Community Day mang lại góc nhìn thực tiễn về ứng dụng AI trong doanh nghiệp — từ Context Engineering, CloudFront optimization, Multi-Agent credit scoring đến xây dựng sản phẩm AI trong 36 giờ. Đây là cầu nối quý giá giữa lý thuyết hàn lâm và thực tế triển khai.

@@ -1,28 +1,29 @@
 ---
-title: "AI/ML/GenAI on AWS Workshop"
-date: "2025-11-15"
+title: "FCAJ Community Day – Conference Call"
+date: "2026-05-23"
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Summary Report: FCAJ Community Day – Conference Call
 
-# Summary Report: “AI/ML/GenAI on AWS Workshop”
+## Event Objectives
 
-### Event Objectives
-
-- Provide an overview of the **AI/ML/GenAI ecosystem on AWS**.  
-- Introduce **Amazon SageMaker** for end-to-end Machine Learning workflows.  
-- Deliver core knowledge and hands-on insights into **Generative AI** through Amazon Bedrock.  
-- Enable networking opportunities between students and AWS experts.  
-- Highlight AI/ML trends in Vietnam and the essential skills required for career development in the field.
+- **Infrastructure & Cost:** Transition CloudFront billing to flat-rate pricing and optimize network performance
+- **AI Product Development:** The 36-hour journey of building an intelligent UI generation tool (UTMorpho)
+- **AI Reliability:** Understanding LLM non-determinism and error mitigation strategies
+- **Context Engineering:** Why input data quality matters more than quantity
+- **Multi-Agent Automation:** Applying multi-agent systems for complex data processing and credit scoring
 
 ---
 
-### Agenda Overview
+## Agenda Overview
 
-**⏰ Time:** 8:30 AM – 12:00 PM, Saturday, November 15, 2025  
-**📍 Location:** AWS Vietnam Office  
+| | |
+|---|---|
+| **Time** | 9:00 AM – 12:00 PM, Saturday, May 23, 2026 |
+| **Location** | AWS Vietnam Office |
 
 ---
 
@@ -30,162 +31,122 @@ pre: " <b> 4.1. </b> "
 
 ### 1. Welcome & Introduction (8:30 – 9:00 AM)
 
-- Participant check-in and networking.  
-- Workshop overview and learning objectives.  
-- Ice-breaker activities to encourage group interaction.  
-- Introduction to the current AI/ML landscape in Vietnam.
+- Check-in and networking
+- Workshop objectives and agenda overview
+
+### 2. Context Is Everything: Making AI Actually Work for You (9:00 – 09:30 AM)
+
+#### What Is Context?
+
+Context is not just supplementary information — it is "the information that helps AI understand the task behind the task." Four core elements:
+
+| Element | Description |
+|---|---|
+| **Goal** | The actual outcome you want to achieve |
+| **Situation** | Who you are, deadlines, constraints |
+| **Constraints** | Tech stack, style, budget, format |
+| **Evidence** | Source code, documents, examples, requirements |
+
+#### Why AI Fails Without Context
+
+- AI cannot read your mind — you must state the goal clearly
+- Generic or off-target responses stem from poor input
+- Verbose or constraint-violating output due to missing boundaries
+
+#### Three Common Mistakes
+
+1. **"The Internet Puller"** — Dumping entire articles, PDFs, or screenshots into a chat. Result: AI gets distracted, accuracy drops, token costs rise
+2. **Stating the Obvious** — Telling AI what it already knows. Instead, focus on what matters next
+3. **Missing Goals & Constraints** — Vague prompts like "Build me a website" yield vague answers
+
+#### The Evolution of Context Systems
+
+| Stage | Description |
+|---|---|
+| **Prompt** | Single question, no state |
+| **Context** | Augmented with supporting documents |
+| **Memory** | Personalization over time ("second AI brain") |
+
+#### Framework for Good Context
+
+1. Define the goal: What should AI help you achieve?
+2. Filter relevant information: Provide only what is necessary
+3. Set constraints: Technology, time, style
+4. Define success criteria: What does a good answer look like?
+
+> Context is not supplementary — context is the product experience. Context Engineering is becoming a core skill for the future.
 
 ---
 
-### 2. AWS AI/ML Services Overview (9:00 – 10:30 AM)
+### 3. Broadening the Cloud Horizon (09:30 AM – 12:00 PM)
 
-The workshop provided a comprehensive introduction to the **full AI Services ecosystem on AWS**, focusing on pre-trained APIs and ready-to-use intelligent capabilities.
+#### Business Process Automation with Amazon Quick Suite
 
-## **1. AI Services (Pre-trained APIs – no training required)**  
-These fully managed AI services support a variety of tasks including recognition, analysis, text extraction, speech processing, and content understanding.
+- **Agentic AI Solution:** Amazon Quick Suite simplifies the path from data to action
+- **Data Ecosystem:** Connects 40+ data sources, databases, data warehouses, combined with Bedrock models and web search
+- **Automation:** Auto-generates meeting minutes (MoM), sends emails, schedules follow-ups
 
----
+#### Amazon CloudFront: From Edge to Origin
 
-### 🔹 Computer Vision
+- **Flat-rate pricing** (launched Nov 2025) — predictable monthly costs, no bill shock from traffic spikes or DDoS
+- **Cost optimization:** Free data transfer from AWS origin services to CloudFront; reduces EC2 CPU load
+- **Security & Performance:**
+  - 700+ global PoPs for low latency
+  - TLS 1.3, mTLS, Edge DDoS protection
+  - HTTP/3 (QUIC) for faster parallel resource loading
 
-**Amazon Rekognition**  
-- Facial recognition  
-- Image and video analysis  
-- Object and scene detection  
-- Text-in-image extraction  
+#### UTMorpho: Building a Product at LotusHacks
 
----
+A 36-hour journey building an AI-powered UI generation tool with direct canvas editing:
 
-### 🔹 Document AI / Text Extraction
+- **Idea:** Solve the frustration of static AI-generated UI mockups. Every re-prompt changes the entire design
+- **Key features:** Direct WYSIWYG canvas editing, preserve unrelated components, optimize token consumption
+- **Lesson:** Real frustration creates real ideas — team chemistry matters more than individual skill
 
-**Amazon Textract**  
-- Extract text, tables, and forms from scanned documents/PDFs  
-- Advanced OCR with structural understanding  
+#### Why temperature = 0 Is Still Not Deterministic
 
-**Amazon Comprehend**  
-- Natural Language Processing (NLP)  
-- Sentiment analysis  
-- Entity recognition  
-- Keyphrase extraction  
-- Topic modeling  
+- **Technical cause:** Floating-point operations on GPUs are non-associative; parallel execution order is non-deterministic
+- **Business cause:** API provider inference batching changes per-request computation
+- **Mitigation:** Majority voting, structured output (JSON mode), design for variance
 
----
+#### Multi-Agent Credit Scoring for Startups
 
-### 🔹 Speech & Voice
+A VPBank case study on using multiple AI Agents to evaluate startup loan applications:
 
-**Amazon Transcribe**  
-- Speech-to-Text conversion  
-- Automatic speech recognition  
-- Speaker identification and timestamps  
-
-**Amazon Polly**  
-- Text-to-Speech (TTS)  
-- Natural-sounding neural voices  
+- **Challenge:** Traditional banking systems fail with startup data (no 3-year financial history, no conventional collateral)
+- **Multi-Agent Model:** Financial Analyst, Market Analyst, Team Evaluator, Risk Assessor — cross-examining for consensus
+- **ROI:**
+  - Processing time: 2-3 weeks → 2-4 hours
+  - 95% cost reduction per credit decision
+  - Double the approval rate through multi-dimensional assessment
 
 ---
 
-### 🔹 Chatbot & Conversation AI
+### 4. Networking & Lucky Draw
 
-**Amazon Lex**  
-- Conversational chatbot development  
-- Intent classification and slot filling  
-
-**Amazon Connect Contact Lens**  
-- Call analytics for contact centers  
-- Sentiment and behavior analysis  
-
----
-
-### 🔹 Personalization & Recommendations
-
-**Amazon Personalize**  
-- Personalized product recommendation  
-- Powered by Amazon.com’s recommendation technology  
-
----
-
-### 🔹 Fraud Detection
-
-**Amazon Fraud Detector**  
-- Detect fraudulent activities  
-- Predict abnormal or risky behavior  
-
----
-
-### 🔹 Forecasting & Time-series
-
-**Amazon Forecast**  
-- Demand and sales forecasting  
-- ML-powered time-series analysis  
-
----
-
-### 🔹 Search
-
-**Amazon Kendra**  
-- Enterprise semantic search  
-- Natural language question answering  
-
----
-
-### 🔹 Translation
-
-**Amazon Translate**  
-- High-quality neural machine translation  
-
----
-
-### Amazon SageMaker – ML Platform
-
-The workshop also explored **Amazon SageMaker** as a powerful ML development platform, including:
-
-- Data preparation and labeling  
-- Model training and tuning  
-- Deployment, monitoring, and optimization  
-- End-to-end MLOps pipelines  
-
-**Live Demo: SageMaker Studio**  
-- Hands-on demonstration from notebook workflows to model deployment.
-
----
-
-### 3. Coffee Break (10:30 – 10:45 AM)
-
-A short networking break between participants and AWS mentors.
-
----
-
-### 4. Generative AI with Amazon Bedrock (10:45 AM – 12:00 PM)
-
-- Overview of Foundation Models: Claude, Llama, Titan  
-- Prompt Engineering techniques: Chain-of-thought, Few-shot examples  
-- **RAG Architecture** and Knowledge Bases  
-- **Bedrock Agents** for multi-step automation  
-- **Guardrails** for safe and compliant AI applications  
-- **Live Demo:** Building a Generative AI chatbot with Bedrock  
+- 10 lucky draw rounds for VIP guests on the 36th floor
+- Networking with students and AWS engineers
+- Discussions on Cloud certification paths, Serverless and GenAI projects
 
 ---
 
 ## Key Takeaways
 
-### AI/ML on AWS
-- AWS provides a wide range of AI Services suitable for real-world applications.  
-- SageMaker supports a standardized, scalable ML lifecycle from data preparation to deployment.  
+### AI Implementation
+Context is the key differentiator that turns a generic language model into a reliable enterprise AI assistant.
 
-### Generative AI
-- Each Foundation Model offers unique strengths depending on the use case.  
-- RAG is essential for integrating enterprise data into GenAI applications.
+### Career Orientation
+The tech industry is shifting — big opportunities for versatile professionals who can code, integrate AI, and manage data workflows.
 
-### Bedrock Ecosystem
-- Bedrock Agents enable automation of complex workflows.  
-- Guardrails ensure safe, responsible, and compliant AI usage.  
+### Community & Networking
+Engaging with AWS ecosystem experts bridges the gap between academic theory and real-world infrastructure architecture.
 
 ---
 
-### Some event photos
-*Add your event photos here*
+## Event Photos
+
+{{< figure src="/images/bfb2481eacf02dae74e1.jpg" title="FCAJ Community Day" alt="Event photo" >}}
 
 ---
 
-> The workshop delivered a comprehensive overview of AI/ML/GenAI on AWS, with practical insights into applying AI Services, SageMaker, and Bedrock in real-world scenarios. It serves as a strong foundation for participants to further explore career opportunities in AI and Machine Learning.
-
+> The FCAJ Community Day provided practical insights into enterprise AI applications — from Context Engineering and CloudFront optimization to Multi-Agent credit scoring and 36-hour AI product development. It served as a valuable bridge between academic theory and real-world deployment.
