@@ -1,16 +1,16 @@
 ---
 title: "Translated Blogs"
-date: "2025-09-08"
+date: "2026-07-04"
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-###  [Blog 1 - Improving network observability with new AWS Outposts racks network metrics](3.4-Blog4/)
-This blog introduces two new Amazon CloudWatch metrics—VifConnectionStatus and VifBgpSessionState—designed to enhance network observability for AWS Outposts racks. These metrics help users monitor the health and performance of network connections between Outpost Networking Devices (ONDs) and Customer Network Devices (CNDs), including service link and local gateway traffic. The post explains how these metrics can reduce troubleshooting time and improve operational resilience in hybrid cloud deployments.
+###  [Blog 1 — Well-Architected Best Practices for Software Supply Chain Security](3.1-Blog1/)
+This blog explores best practices for package consumers to defend against supply chain attacks like Shai-Hulud, Chalk/Debug, and tea.xyz. Aligned with the AWS Well-Architected Framework Security Pillar, it covers four key areas: using temporary credentials and least privilege to limit credential exposure; implementing defense in depth with artifact signing (AWS Signer, Amazon ECR managed signing), centralized dependency management (AWS CodeArtifact), and continuous scanning throughout the SDLC (Amazon Inspector, Kiro); and configuring logging and monitoring (CloudTrail, GuardDuty, Security Hub) for rapid detection and forensics. Each layer narrows the window of opportunity for threat actors.
 
-###  [Blog 2 - How an infrastructure developer leverages AI certification to drive innovation](3.5-Blog5/)
-This blog highlights the journey of Alexandra Fernandez, an infrastructure developer at a financial firm, who proactively pursued AWS AI certifications to stay ahead of technological change. By earning credentials like AWS Certified AI Practitioner and applying them to real-world projects—such as building a virtual agent with Amazon Bedrock—she exemplifies how professionals can use certification to drive innovation, contribute to community learning, and prepare for an AI-driven future.
+###  [Blog 2 — Building Secure, Verifiable Blockchain Key Management on AWS Nitro Enclaves at Turnkey](3.2-Blog2/)
+This blog details how Turnkey built a verifiable key management system on AWS Nitro Enclaves, solving the fundamental tension between security and usability in Web3 private key management. It covers the enclave-native architecture with five specialized enclave applications (Signer, Policy Engine, Parser, Notarizer, TLS Fetcher); hardware-rooted attestation via the Nitro Security Module (NSM) with PCR measurements and AWS root certificate chaining; quorum-controlled provisioning where no single engineer can alter an enclave; and reproducible builds through QuorumOS and StageX for deterministic verification. The system exposes cryptographic proofs publicly via Turnkey Verified, enabling anyone to verify that code running in production matches open-source source code.
 
-###  [Blog 3 - Powering AI-Driven Security with the Open Cybersecurity Schema Framework](3.6-Blog6/)
-This blog explores how the Open Cybersecurity Schema Framework (OCSF) enables organizations to unlock the full potential of AI in cybersecurity. By standardizing security event data across diverse tools and platforms, OCSF helps streamline threat detection, accelerate incident response, and improve overall security operations. The post highlights real-world applications, including how fintech company eightcap used OCSF to unify telemetry and enhance AI-powered threat analysis.
+###  [Blog 3 — Inside AWS DevOps Agent: The Incident Lifecycle from Triage to Prevention](3.3-blog3/)
+This blog explores how AWS DevOps Agent uses multi-agent reasoning to transform incident response in distributed systems. Starting with a topology graph that provides architectural awareness, it walks through the full incident lifecycle: Triage for fast signal correlation, Investigation with multi-hypothesis generation and counter-evidence validation (the core reasoning engine), Mitigation with safe-by-design rollback-aware plans and human-in-the-loop execution, and Prevention that clusters patterns across incidents to drive continuous improvement. The result is an operational flywheel where each investigation makes the system stronger and reduces future incident count.
