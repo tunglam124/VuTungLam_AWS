@@ -61,7 +61,7 @@ Model Context Protocol (MCP) là giao thức kết nối AI với dữ liệu n�
 
 ## Hình ảnh
 
-{{< figure src="/images/bfb2481eacf02dae74e1.jpg" title="FCAJ Community Day - Data Driven, AI Risen" alt="FCAJ Community Day event photo" >}}
+{{< figure src="/images/2fdf6284826a03345a7b.jpg" title="FCAJ Community Day - Data Driven, AI Risen" alt="FCAJ Community Day event photo" >}}
 
 ---
 
