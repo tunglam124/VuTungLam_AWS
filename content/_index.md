@@ -9,22 +9,21 @@ chapter: false
 ### Student Information:
 &emsp; **Full Name:** Vu Tung Lam
 
-&emsp; **Phone Number:** [Your phone number]
+&emsp; **Phone Number:** 0962683740
 
-&emsp; **Email:** [your.email@example.com]
+&emsp; **Email:** vulam.061204@gmail.com
 
-&emsp; **University:** [Your university]
+&emsp; **University:** Ho Chi Minh City University of Technology
 
-&emsp; **Major:** [Your major]
+&emsp; **Major:** Information Security
 
-&emsp; **Class:** [Your class] &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+&emsp; **Class:** 22DATA1 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** [Start date] to [End date]
+&emsp; **Internship Duration:** 17/04/2026 – 10/07/2026
 
-<!-- Thêm ảnh: đặt file vutunglam.png vào thư mục static/images/ -->
-<!-- ![Your profile photo](/images/vutunglam.png) -->
+{{< figure src="/images/537a5beeb500345e6d11.jpg" title="Vu Tung Lam" alt="Profile photo" width="200" >}}
 
 
 

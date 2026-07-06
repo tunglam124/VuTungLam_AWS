@@ -9,22 +9,21 @@ chapter: false
 ### Thông tin sinh viên:
 &emsp; **Họ và tên:** Vũ Tùng Lâm
 
-&emsp; **Số điện thoại:** [Số điện thoại của bạn]
+&emsp; **Số điện thoại:** 0962683740
 
-&emsp; **Email:** [email.cua.ban@example.com]
+&emsp; **Email:** vulam.061204@gmail.com
 
-&emsp; **Trường:** [Tên trường]
+&emsp; **Trường:** Trường Đại học Công nghệ Thành phố Hồ Chí Minh
 
-&emsp; **Ngành:** [Ngành học]
+&emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** [Lớp] &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
+&emsp; **Lớp:** 22DATA1 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
-&emsp; **Thời gian thực tập:** Từ [ngày bắt đầu] đến [ngày kết thúc]
+&emsp; **Thời gian thực tập:** Từ 17/04/2026 đến 10/07/2026
 
-<!-- Thêm ảnh: đặt file vutunglam.png vào thư mục static/images/ -->
-<!-- ![Ảnh đại diện](/images/vutunglam.png) -->
+{{< figure src="/images/537a5beeb500345e6d11.jpg" title="Vũ Tùng Lâm" alt="Ảnh đại diện" width="200" >}}
 
 ### Nội dung báo cáo
 
