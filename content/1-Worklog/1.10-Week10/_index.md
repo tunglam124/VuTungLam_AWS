@@ -1,6 +1,6 @@
 ---
 title: "WEEK 10 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-15"
 weight: 10
 chapter: false
 pre: " <b> 1.10 </b> "
@@ -23,11 +23,11 @@ pre: " <b> 1.10 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Develop React Flow canvas: create CustomNode (10 node types with icon + color) and CustomEdge (smoothstep + animated); implement smartHandles and edgeRouting utilities. | 10/11/2025 | 10/11/2025 | |
-| 2 (Tue) | Build UI components: GlassPanel (frosted glass effect), TopHUD (top status bar), FloatingCommandBar (terminal-style command bar), HackerOverlay, ResultModal. | 11/11/2025 | 11/11/2025 | |
-| 3 (Wed) | Develop useAI hook: connect frontend to backend API (generate, scan, simulate); handle async/await, error handling, real-time logging to terminal; implement useStore (Zustand) for global state management. | 12/11/2025 | 12/11/2025 | |
-| 4 (Thu) | Deploy Cloud Nexus to AWS: configure ECS Fargate cluster for frontend & backend containers; set up Application Load Balancer and Auto Scaling. | 13/11/2025 | 13/11/2025 | |
-| 5 (Fri) | Learn Kubernetes: install Minikube, write deployment.yaml for Cloud Nexus, deploy the application; set up Velero backup for cluster resources. | 14/11/2025 | 14/11/2025 | |
+| 1 (Mon) | Develop React Flow canvas: create CustomNode (10 node types with icon + color) and CustomEdge (smoothstep + animated); implement smartHandles and edgeRouting utilities. | 15/06/2026 | 15/06/2026 | |
+| 2 (Tue) | Build UI components: GlassPanel (frosted glass effect), TopHUD (top status bar), FloatingCommandBar (terminal-style command bar), HackerOverlay, ResultModal. | 16/06/2026 | 16/06/2026 | |
+| 3 (Wed) | Develop useAI hook: connect frontend to backend API (generate, scan, simulate); handle async/await, error handling, real-time logging to terminal; implement useStore (Zustand) for global state management. | 17/06/2026 | 17/06/2026 | |
+| 4 (Thu) | Deploy Cloud Nexus to AWS: configure ECS Fargate cluster for frontend & backend containers; set up Application Load Balancer and Auto Scaling. | 18/06/2026 | 18/06/2026 | |
+| 5 (Fri) | Learn Kubernetes: install Minikube, write deployment.yaml for Cloud Nexus, deploy the application; set up Velero backup for cluster resources. | 19/06/2026 | 19/06/2026 | |
 
 ---
 

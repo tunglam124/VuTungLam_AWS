@@ -1,6 +1,6 @@
 ---
 title: "WEEK 3 WORKLOG"
-date: "2025-11-10"
+date: "2026-05-04"
 weight: 1
 chapter: false
 pre: " <b> 1.3 </b> "
@@ -21,10 +21,20 @@ pre: " <b> 1.3 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Triển khai AWS Storage Gateway**: Chuẩn bị môi trường (S3 Bucket, EC2) và tiến hành cài đặt, kích hoạt (activate) Storage Gateway. | 22/09/2025 | 22/09/2025 | |
-| 2 (Thứ Ba) | **Lab 26 – AWS WAF**: Triển khai ứng dụng web trên S3 và cấu hình AWS WAF với Web ACLs, sử dụng AWS Managed Rules để bảo vệ. | 23/09/2025 | 23/09/2025 | |
-| 3 (Thứ Tư) | **Lab 27 – Manage Resources**: Thực hành tạo, sửa, xóa Tags trên EC2 instance. Sử dụng Tag Editor và Resource Groups để quản lý tài nguyên. | 24/09/2025 | 24/09/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu quy trình Workshop**: Dành thời gian xem và tìm hiểu các hướng dẫn, các bước cơ bản để thực hiện một buổi workshop. | 25/09/2025 | 25/09/2025 | |
+| 1 (Thứ Hai) | **Triển khai AWS Storage Gateway**: Chuẩn bị môi trường (S3 Bucket, EC2) và tiến hành cài đặt, kích hoạt (activate) Storage Gateway. | 04/05/2026 | 04/05/2026 | |
+| 2 (Thứ Ba) | **Lab 26 – AWS WAF**: Triển khai ứng dụng web trên S3 và cấu hình AWS WAF với Web ACLs, sử dụng AWS Managed Rules để bảo vệ. | 05/05/2026 | 05/05/2026 | |
+| 3 (Thứ Tư) | **Lab 27 – Manage Resources**: Thực hành tạo, sửa, xóa Tags trên EC2 instance. Sử dụng Tag Editor và Resource Groups để quản lý tài nguyên. | 06/05/2026 | 06/05/2026 | |
+| 4 (Thứ Năm) | **Tìm hiểu quy trình Workshop**: Dành thời gian xem và tìm hiểu các hướng dẫn, các bước cơ bản để thực hiện một buổi workshop. | 07/05/2026 | 07/05/2026 | |
+
+### **Tài liệu tham khảo**
+
+* [AWS VM Import/Export](https://000014.awsstudygroup.com/)
+* [Optimize EC2 cost with Lambda](https://000022.awsstudygroup.com/)
+* [CDK Basic](https://000038.awsstudygroup.com/)
+* [CDK Basic - 2 (CDK Advance)](https://000076.awsstudygroup.com/)
+* [Introduction to Infrastructure as Code](https://000102.awsstudygroup.com/)
+* [AWS Toolkit for VS Code: Amazon Q & CodeWhisperer](https://000087.awsstudygroup.com/)
+* [Automatically Archive Amazon EBS Snapshots](https://000088.awsstudygroup.com/)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "WEEK 8 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-01"
 weight: 1
 chapter: false
 pre: " <b> 1.8 </b> "
@@ -22,11 +22,11 @@ pre: " <b> 1.8 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | Viết Dockerfile cho frontend (React + Vite) và backend (FastAPI + Uvicorn); tạo docker-compose.yml để chạy đa container. | 27/10/2025 | 27/10/2025 | |
-| 2 (Thứ Ba) | Thiết lập AWS CodeCommit repository chứa mã nguồn Cloud Nexus; cấu hình IAM roles cho pipeline. | 28/10/2025 | 28/10/2025 | |
-| 3 (Thứ Tư) | Xây dựng CI pipeline với AWS CodeBuild: tự động build Docker images, chạy unit test cho backend FastAPI. | 29/10/2025 | 29/10/2025 | |
-| 4 (Thứ Năm) | Thiết lập CD pipeline với AWS CodeDeploy: triển khai Docker containers lên EC2; cấu hình AppSpec và scripts. | 30/10/2025 | 30/10/2025 | |
-| 5 (Thứ Sáu) | Dùng Terraform để định nghĩa toàn bộ hạ tầng CI/CD (VPC, ECR repositories, CodePipeline, CodeBuild projects, CodeDeploy groups). | 31/10/2025 | 31/10/2025 | |
+| 1 (Thứ Hai) | Viết Dockerfile cho frontend (React + Vite) và backend (FastAPI + Uvicorn); tạo docker-compose.yml để chạy đa container. | 01/06/2026 | 01/06/2026 | |
+| 2 (Thứ Ba) | Thiết lập AWS CodeCommit repository chứa mã nguồn Cloud Nexus; cấu hình IAM roles cho pipeline. | 02/06/2026 | 02/06/2026 | |
+| 3 (Thứ Tư) | Xây dựng CI pipeline với AWS CodeBuild: tự động build Docker images, chạy unit test cho backend FastAPI. | 03/06/2026 | 03/06/2026 | |
+| 4 (Thứ Năm) | Thiết lập CD pipeline với AWS CodeDeploy: triển khai Docker containers lên EC2; cấu hình AppSpec và scripts. | 04/06/2026 | 04/06/2026 | |
+| 5 (Thứ Sáu) | Dùng Terraform để định nghĩa toàn bộ hạ tầng CI/CD (VPC, ECR repositories, CodePipeline, CodeBuild projects, CodeDeploy groups). | 05/06/2026 | 05/06/2026 | |
 
 ---
 

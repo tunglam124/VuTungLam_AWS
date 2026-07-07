@@ -1,6 +1,6 @@
 ---
 title: "WEEK 7 WORKLOG"
-date: "2025-11-10"
+date: "2026-05-25"
 weight: 1
 chapter: false
 pre: " <b> 1.7 </b> "
@@ -22,11 +22,11 @@ pre: " <b> 1.7 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | Khởi tạo dự án Cloud Nexus: cài đặt Vite + React 18 + Tailwind CSS + React Flow; tạo cấu trúc thư mục frontend. | 20/10/2025 | 20/10/2025 | https://github.com/thawngs18/DEMO.git |
-| 2 (Thứ Ba) | Thiết lập backend FastAPI: tạo main.py với các endpoint /api/ai/generate, /api/topology/validate, /api/simulation/scan, /api/simulation/run. | 21/10/2025 | 21/10/2025 | |
-| 3 (Thứ Tư) | Tích hợp Google Gemini AI: viết ai_service.py với system prompts (GENERATION_PROMPT, VALIDATION_PROMPT, SIMULATION_PROMPT, SCAN_PROMPT); cấu hình Gemini client. | 22/10/2025 | 22/10/2025 | |
-| 4 (Thứ Năm) | Định nghĩa node definitions: tạo 10 loại node (Server, Database, Firewall, IPS, IDS, Router, Cloud, IoT, Workstation, Attacker) với icon Lucide React và màu sắc tương ứng. | 23/10/2025 | 23/10/2025 | |
-| 5 (Thứ Sáu) | Tìm hiểu AWS Lambda + API Gateway cho Serverless backend; viết CloudFormation template triển khai hạ tầng cho Cloud Nexus. | 24/10/2025 | 24/10/2025 | |
+| 1 (Thứ Hai) | Khởi tạo dự án Cloud Nexus: cài đặt Vite + React 18 + Tailwind CSS + React Flow; tạo cấu trúc thư mục frontend. | 25/05/2026 | 25/05/2026 | https://github.com/thawngs18/DEMO.git |
+| 2 (Thứ Ba) | Thiết lập backend FastAPI: tạo main.py với các endpoint /api/ai/generate, /api/topology/validate, /api/simulation/scan, /api/simulation/run. | 26/05/2026 | 26/05/2026 | |
+| 3 (Thứ Tư) | Tích hợp Google Gemini AI: viết ai_service.py với system prompts (GENERATION_PROMPT, VALIDATION_PROMPT, SIMULATION_PROMPT, SCAN_PROMPT); cấu hình Gemini client. | 27/05/2026 | 27/05/2026 | |
+| 4 (Thứ Năm) | Định nghĩa node definitions: tạo 10 loại node (Server, Database, Firewall, IPS, IDS, Router, Cloud, IoT, Workstation, Attacker) với icon Lucide React và màu sắc tương ứng. | 28/05/2026 | 28/05/2026 | |
+| 5 (Thứ Sáu) | Tìm hiểu AWS Lambda + API Gateway cho Serverless backend; viết CloudFormation template triển khai hạ tầng cho Cloud Nexus. | 29/05/2026 | 29/05/2026 | |
 
 ---
 

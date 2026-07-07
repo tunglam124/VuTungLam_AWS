@@ -1,6 +1,6 @@
 ---
 title: "WEEK 9 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-08"
 weight: 1
 chapter: false
 pre: " <b> 1.9 </b> "
@@ -22,11 +22,11 @@ pre: " <b> 1.9 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | Phát triển AI Simulation Engine: viết SIMULATION_PROMPT với hướng dẫn chi tiết về attack path tracing, Zero Trust logic, action mô tả kỹ thuật tấn công (nmap, CVE exploit, brute-force). | 03/11/2025 | 03/11/2025 | |
-| 2 (Thứ Ba) | Xây dựng API endpoint /api/simulation/run và /api/simulation/run-with-defense; xử lý SimulationRequest/SimulationResponse models; implement normalize_node để map flat/nested JSON từ AI. | 04/11/2025 | 04/11/2025 | |
-| 3 (Thứ Tư) | Phát triển SCAN_PROMPT và VALIDATION_PROMPT: phân tích bề mặt tấn công, kiểm tra lỗ hổng theo Zero Trust, sinh kịch bản tấn công (SQL Injection, Lateral Movement, DDoS IoT Botnet). | 05/11/2025 | 05/11/2025 | |
-| 4 (Thứ Năm) | Debug và tối ưu AI service: xử lý JSON parse errors, retry logic cho truncated responses, type_mapping cho các thiết bị mạng (internet→cloud, pc→workstation, db→database). | 06/11/2025 | 06/11/2025 | |
-| 5 (Thứ Sáu) | Thiết lập Prometheus + Grafana cho monitoring: cấu hình metrics endpoint cho FastAPI, tạo dashboard giám sát CPU, memory, request latency; tìm hiểu cAdvisor cho container metrics. | 07/11/2025 | 07/11/2025 | |
+| 1 (Thứ Hai) | Phát triển AI Simulation Engine: viết SIMULATION_PROMPT với hướng dẫn chi tiết về attack path tracing, Zero Trust logic, action mô tả kỹ thuật tấn công (nmap, CVE exploit, brute-force). | 08/06/2026 | 08/06/2026 | |
+| 2 (Thứ Ba) | Xây dựng API endpoint /api/simulation/run và /api/simulation/run-with-defense; xử lý SimulationRequest/SimulationResponse models; implement normalize_node để map flat/nested JSON từ AI. | 09/06/2026 | 09/06/2026 | |
+| 3 (Thứ Tư) | Phát triển SCAN_PROMPT và VALIDATION_PROMPT: phân tích bề mặt tấn công, kiểm tra lỗ hổng theo Zero Trust, sinh kịch bản tấn công (SQL Injection, Lateral Movement, DDoS IoT Botnet). | 10/06/2026 | 10/06/2026 | |
+| 4 (Thứ Năm) | Debug và tối ưu AI service: xử lý JSON parse errors, retry logic cho truncated responses, type_mapping cho các thiết bị mạng (internet→cloud, pc→workstation, db→database). | 11/06/2026 | 11/06/2026 | |
+| 5 (Thứ Sáu) | Thiết lập Prometheus + Grafana cho monitoring: cấu hình metrics endpoint cho FastAPI, tạo dashboard giám sát CPU, memory, request latency; tìm hiểu cAdvisor cho container metrics. | 12/06/2026 | 12/06/2026 | |
 
 ---
 

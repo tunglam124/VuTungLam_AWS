@@ -1,6 +1,6 @@
 ---
 title: "WEEK 5 WORKLOG"
-date: "2025-11-10"
+date: "2026-05-11"
 weight: 1
 chapter: false
 pre: " <b> 1.5 </b> "
@@ -21,11 +21,19 @@ pre: " <b> 1.5 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **S3 Integration (Part 1)**: Create an S3 Bucket and configure its Bucket Policy for public read access. | 06/10/2025 | 06/10/2025 | |
-| 2 (Tue) | **Deploy AWS WAF**: Create a Web ACL, add basic security rules (e.g., block suspicious IPs), and associate it with the ALB. | 07/10/2025 | 07/10/2025 | |
-| 3 (Wed) | **Review & Document**: Check Security Groups (least privilege), review EC2 Right-sizing, and write architecture documentation. | 08/10/2025 | 08/10/2025 | |
-| 4 (Thu) | **S3 Integration (Part 2)**: Update the application's HTML/CSS source code to use image links from the S3 Bucket. | 09/10/2025 | 09/10/2025 | |
-| 5 (Fri) | **Learn IaC**: Read an overview of Infrastructure as Code and watch an introductory video on AWS CloudFormation basics (Stacks, Templates). | 10/10/2025 | 10/10/2025 | |
+| 1 (Mon) | **S3 Integration (Part 1)**: Create an S3 Bucket and configure its Bucket Policy for public read access. | 11/05/2026 | 11/05/2026 | |
+| 2 (Tue) | **Deploy AWS WAF**: Create a Web ACL, add basic security rules (e.g., block suspicious IPs), and associate it with the ALB. | 12/05/2026 | 12/05/2026 | |
+| 3 (Wed) | **Review & Document**: Check Security Groups (least privilege), review EC2 Right-sizing, and write architecture documentation. | 13/05/2026 | 13/05/2026 | |
+| 4 (Thu) | **S3 Integration (Part 2)**: Update the application's HTML/CSS source code to use image links from the S3 Bucket. | 14/05/2026 | 14/05/2026 | |
+| 5 (Fri) | **Learn IaC**: Read an overview of Infrastructure as Code and watch an introductory video on AWS CloudFormation basics (Stacks, Templates). | 15/05/2026 | 15/05/2026 | |
+
+### **References / Materials**
+
+* [Using AWS IAM Identity Center for Robust Identity Management](https://000012.awsstudygroup.com/)
+* [Limitation of User Rights with IAM Permission Boundary](https://000030.awsstudygroup.com/)
+* [Secure Hybrid Access to S3 using VPC Endpoints](https://000111.awsstudygroup.com/)
+* [Using AWS Secrets Manager with Amazon RDS and AWS Fargate](https://000096.awsstudygroup.com/)
+* [Continuous Audit and Limit Security Groups with AWS Firewall Manager](https://000097.awsstudygroup.com/)
 
 ---
 

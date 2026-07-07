@@ -1,6 +1,6 @@
 ---
 title: "WEEK 2 WORKLOG"
-date: "2025-11-10"
+date: "2026-04-27"
 weight: 1
 chapter: false
 pre: " <b> 1.2 </b> "
@@ -20,11 +20,19 @@ pre: " <b> 1.2 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Lab 08 – AWS CloudWatch (Part 1)**: Configure EC2; create CloudWatch Alarm (CPU) and CloudWatch Dashboard. | 15/09/2025 | 15/09/2025 | |
-| 2 (Tue) | **Lab 08 – AWS CloudWatch (Part 2)**: Install and configure the CloudWatch Agent on EC2 to collect and push application logs. | 16/09/2025 | 16/09/2025 | |
-| 3 (Wed) | **Learn AWS Organizations (Part 1)**: Create a new member account and structure accounts using Organizational Units (OUs). | 17/09/2025 | 17/09/2025 | |
-| 4 (Thu) | **Deploy AWS Storage Gateway**: Prepare S3 Bucket; launch EC2 instance and install Storage Gateway. | 18/09/2025 | 18/09/2025 | |
-| 5 (Fri) | **Learn AWS Organizations (Part 2)**: Invite an existing AWS account to the Organization; practice `Switch Role` access. | 19/09/2025 | 19/09/2025 | |
+| 1 (Mon) | **Lab 08 – AWS CloudWatch (Part 1)**: Configure EC2; create CloudWatch Alarm (CPU) and CloudWatch Dashboard. | 27/04/2026 | 27/04/2026 | |
+| 2 (Tue) | **Lab 08 – AWS CloudWatch (Part 2)**: Install and configure the CloudWatch Agent on EC2 to collect and push application logs. | 28/04/2026 | 28/04/2026 | |
+| 3 (Wed) | **Learn AWS Organizations (Part 1)**: Create a new member account and structure accounts using Organizational Units (OUs). | 29/04/2026 | 29/04/2026 | |
+| 4 (Thu) | **Deploy AWS Storage Gateway**: Prepare S3 Bucket; launch EC2 instance and install Storage Gateway. | 30/04/2026 | 30/04/2026 | |
+| 5 (Fri) | **Learn AWS Organizations (Part 2)**: Invite an existing AWS account to the Organization; practice `Switch Role` access. | 01/05/2026 | 01/05/2026 | |
+
+### **References / Materials**
+
+* [Set up Hybrid DNS with Route 53 Resolver](https://000010.awsstudygroup.com/)
+* [Get Started with Amazon RDS](https://000005.awsstudygroup.com/)
+* [Getting Started with the AWS CLI](https://000011.awsstudygroup.com/)
+* [Work with Amazon DynamoDB](https://000060.awsstudygroup.com/)
+* [AWS Networking and Content Delivery](https://000092.awsstudygroup.com/)
 
 ---
 
