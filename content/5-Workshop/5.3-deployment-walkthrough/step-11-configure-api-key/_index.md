@@ -56,5 +56,5 @@ aws lambda get-function-configuration --function-name CloudNexus-BackendHandler-
 ```
 
 ---
-![Screenshot](/images/5-Workshop/step-11.png)
+![Screenshot](/5-Workshop/step-11.png)
 

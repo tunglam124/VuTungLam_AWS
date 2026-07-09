@@ -48,4 +48,4 @@ Outputs:
 
 ---
 
-![Screenshot](/images/5-Workshop/step-6.png)
+![Screenshot](/5-Workshop/step-6.png)

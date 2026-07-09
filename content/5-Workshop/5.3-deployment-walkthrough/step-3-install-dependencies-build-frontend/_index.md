@@ -54,5 +54,5 @@ Test-Path dist/index.html
 
 ---
 
-![Screenshot](/images/5-Workshop/step-3.png)
+![Screenshot](/5-Workshop/step-3.png)
 

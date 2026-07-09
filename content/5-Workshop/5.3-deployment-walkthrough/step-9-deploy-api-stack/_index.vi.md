@@ -51,7 +51,7 @@ Outputs:
 
 
 
-![Screenshot](/images/5-Workshop/step-9.png)
+![Screenshot](/5-Workshop/step-9.png)
 
 
 ---

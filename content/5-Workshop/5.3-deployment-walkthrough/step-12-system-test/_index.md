@@ -55,4 +55,4 @@ curl -s -X POST "$apiUrl/api/ai/generate" -H "Content-Type: application/json" -d
 
 ---
 
-![Screenshot](/images/5-Workshop/step-12.png)
+![Screenshot](/5-Workshop/step-12.png)

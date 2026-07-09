@@ -50,4 +50,4 @@ self.frontend_bucket = Bucket(self, 'FrontendBucket',
 )
 ```
 
-![Screenshot](/images/5-Workshop/step-10.png)
+![Screenshot](/5-Workshop/step-10.png)

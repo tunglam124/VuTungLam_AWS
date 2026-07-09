@@ -92,7 +92,7 @@ python/websockets/speedups.cpython-312-aarch64-linux-gnu.so
 
 ---
 
-![Screenshot](/images/5-Workshop/step-7.png)
+![Screenshot](/5-Workshop/step-7.png)
 
 
 

@@ -18,5 +18,5 @@ pip install -r requirements.txt
 
 ---
 
-![Screenshot](/images/5-Workshop/step-4.png)
+![Screenshot](/5-Workshop/step-4.png)
 

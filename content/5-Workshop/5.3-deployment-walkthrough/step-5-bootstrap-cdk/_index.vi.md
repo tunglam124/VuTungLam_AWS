@@ -33,9 +33,9 @@ cdk bootstrap aws://<ACCOUNT_ID>/us-east-1
 ---
 
 
-![Screenshot](/images/5-Workshop/step-501.png)
+![Screenshot](/5-Workshop/step-501.png)
 
 
-![Screenshot](/images/5-Workshop/step-502.png)
+![Screenshot](/5-Workshop/step-502.png)
 
 

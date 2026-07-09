@@ -35,4 +35,4 @@ aws sts get-caller-identity
 
 ---
 
-![Screenshot](/images/5-Workshop/step-0.png)
+![Screenshot](/5-Workshop/step-0.png)
