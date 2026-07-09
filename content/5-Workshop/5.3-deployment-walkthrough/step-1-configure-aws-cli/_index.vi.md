@@ -1,6 +1,6 @@
 ---
 title : "Cấu hình AWS CLI"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 1
 chapter : false
 pre : " <b> Step 1 </b> "
@@ -9,19 +9,21 @@ pre : " <b> Step 1 </b> "
 
 ---
 
-### Thao tác
+## Các Lệnh
 
 ```powershell
 aws configure
 # AWS Access Key ID: ********
 # AWS Secret Access Key: ********
-# Default region name: ap-southeast-1
+# Default region name: us-east-1
 # Default output format: json
 
 aws sts get-caller-identity
 ```
 
-### Expected output
+---
+
+## Kết Quả Mong Đợi
 
 ```json
 {
@@ -31,4 +33,6 @@ aws sts get-caller-identity
 }
 ```
 
-📸 *[CHÈN ẢNH: Kết quả aws sts get-caller-identity hiển thị Account ID]*
+---
+
+![Screenshot](/images/5-Workshop/step-0.png)

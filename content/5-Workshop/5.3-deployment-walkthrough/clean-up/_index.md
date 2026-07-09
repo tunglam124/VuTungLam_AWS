@@ -1,52 +1,61 @@
 ---
 title : "Clean Up Resources"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 13
 chapter : false
 pre : " <b> Clean Up </b> "
 ---
-# Clean Up Resources
+
 
 ---
 
-### Step 1: Delete CDK stacks
+## Overview
+
+This section shows how to clean up all AWS resources to avoid ongoing charges.
+
+---
+
+## Step 1: Delete CDK Stacks
 
 ```powershell
-cd C:\<USER>\<PROJECT_DIR>\cdk
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
 cdk destroy --all --force
 ```
 
 **Expected:**
 ```
- ✅  CloudNexusFrontendStack: destroyed
- ✅  CloudNexusAuthApiStack: destroyed
- ✅  CloudNexusSimulationStack: destroyed
+ ✅  CloudNexus-Frontend: destroyed
+ ✅  CloudNexus-Backend: destroyed
+ ✅  CloudNexus-Simulation: destroyed
 ```
-
-📸 *[SCREENSHOT: cdk destroy success]*
 
 ---
 
-### Step 2: Delete S3 buckets (retained by CDK due to RemovalPolicy.RETAIN)
+## Step 2: Delete S3 Buckets (Retained)
+
+S3 buckets with `RemovalPolicy.RETAIN` must be deleted manually:
 
 ```powershell
-aws s3 rb s3://cloudnexusfrontendstack-frontendbucket-<SUFFIX> --force
-aws s3 rb s3://cloudnexus-results-<ACCOUNT_ID>-ap-southeast-1 --force
+# List buckets
+aws s3 ls | Select-String "cloudnexus"
+
+# Delete buckets
+aws s3 rb s3://cloudnexus-frontend-<SUFFIX> --force
+aws s3 rb s3://cloudnexus-results-<ACCOUNT>-us-east-1 --force
 ```
 
 ---
 
-### Step 3: Delete Lambda Layer versions
+## Step 3: Delete Lambda Layer Versions
 
 ```powershell
 aws lambda list-layer-versions --layer-name CloudNexus-PythonDeps
 aws lambda delete-layer-version --layer-name CloudNexus-PythonDeps --version-number 1
-aws lambda delete-layer-version --layer-name CloudNexus-PythonDeps --version-number 2
 ```
 
 ---
 
-### Step 4: Delete Secrets Manager
+## Step 4: Delete Secrets Manager
 
 ```powershell
 aws secretsmanager delete-secret --secret-id cloud-nexus/google-api-key --force-delete-without-recovery
@@ -54,32 +63,22 @@ aws secretsmanager delete-secret --secret-id cloud-nexus/google-api-key --force-
 
 ---
 
-### Step 5: Delete CloudWatch Log Groups
+## Step 5: Delete CloudWatch Log Groups
 
 ```powershell
-aws logs delete-log-group --log-group-name /aws/lambda/CloudNexus-APIHandler
-aws logs delete-log-group --log-group-name /aws/lambda/CloudNexus-ScanWorker
-aws logs delete-log-group --log-group-name /aws/lambda/CloudNexus-Notifier
+aws logs delete-log-group --log-group-name /aws/lambda/CloudNexus-BackendHandler
 ```
 
 ---
 
-### Step 6 (optional): Delete CDK Bootstrap
+## Step 6: Delete CDK Bootstrap (Optional)
 
 ```powershell
-aws s3 rb s3://cdk-hnb659fds-assets-<ACCOUNT_ID>-ap-southeast-1 --force
+aws s3 rb s3://cdk-hnb659fds-assets-<ACCOUNT>-us-east-1 --force
 aws cloudformation delete-stack --stack-name CDKToolkit
 ```
 
 ---
 
-### Step 7: Verify
 
-```powershell
-aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE
-aws lambda list-functions --query "Functions[?starts_with(FunctionName,'CloudNexus')].FunctionName"
-aws s3 ls | Select-String "cloudnexus"
-aws logs describe-log-groups --log-group-name-prefix "/aws/lambda/CloudNexus"
-```
 
-**Expected result:** No CloudNexus resources remain.

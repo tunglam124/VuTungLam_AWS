@@ -1,44 +1,57 @@
 ---
 title : "Deploy Frontend Stack"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 10
 chapter : false
 pre : " <b> Step 10 </b> "
 ---
-# Step 10: Deploy Frontend Stack
+
 
 ---
 
-### Mô tả
+## Mô Tả
 
-Tạo S3 bucket và upload frontend (React) lên static website hosting.
+Tạo S3 bucket và CloudFront distribution cho static website hosting.
 
-### Thao tác
+---
+
+## Các Lệnh
 
 ```powershell
-cdk deploy CloudNexusFrontendStack --require-approval never
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+cdk deploy CloudNexus-Frontend --require-approval never
 ```
 
-### Expected output
+---
+
+## Kết Quả Mong Đợi
 
 ```
-✅  CloudNexusFrontendStack
+✅  CloudNexus-Frontend
 Outputs:
-  CloudNexusFrontendStack.WebsiteURL = http://cloudnexusfrontendstack-<SUFFIX>.s3-website-ap-southeast-1.amazonaws.com
+  CloudNexus-Frontend.WebsiteURL = https://d3rs3evkmfvesp.cloudfront.net
+  CloudNexus-Frontend.BucketName = cloudnexus-frontend-<SUFFIX>
+  CloudNexus-Frontend.DistributionId = <DIST_ID>
 ```
 
-📸 *[CHÈN ẢNH: cdk deploy FrontendStack]*
+---
 
-### Cấu hình S3
+## Cấu Hình S3
 
-```typescript
-// frontend-stack.ts
-this.frontendBucket = new Bucket(this, 'FrontendBucket', {
-  publicReadAccess: true,
-  blockPublicAccess: BlockPublicAccess.BLOCK_ACLS,
-  websiteIndexDocument: 'index.html',
-  websiteErrorDocument: 'index.html',
-  removalPolicy: RemovalPolicy.RETAIN,
-  versioned: true,
-})
+```python
+# frontend_stack.py
+self.frontend_bucket = Bucket(self, 'FrontendBucket',
+    public_read_access=True,
+    block_public_access=BlockPublicAccess(block_acls=False),
+    website_index_document='index.html',
+    website_error_document='index.html',
+    removal_policy=RemovalPolicy.RETAIN,
+    versioned=True,
+)
 ```
+
+
+![Screenshot](/images/5-Workshop/step-10.png)
+
+
+

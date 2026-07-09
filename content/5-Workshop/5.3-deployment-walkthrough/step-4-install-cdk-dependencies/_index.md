@@ -1,20 +1,22 @@
 ---
 title : "Install CDK Dependencies"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 4
 chapter : false
 pre : " <b> Step 4 </b> "
 ---
-# Step 4: Install CDK Dependencies
+
 
 ---
 
-### Commands
+## Commands
 
 ```powershell
-cd cdk
-npm install
-cd ..
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+pip install -r requirements.txt
 ```
 
-📸 *[SCREENSHOT: Terminal installing CDK dependencies]*
+---
+
+![Screenshot](/images/5-Workshop/step-4.png)
+

@@ -1,68 +1,156 @@
 ---
 title : "Architecture & Technical Design"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 2
 chapter : false
 pre : " <b> 5.2 </b> "
 ---
-# 5.2. Architecture & Technical Design (2.0 pts)
+
 
 ---
 
-### Architecture Diagram
+## System Architecture
 
-*(Diagram image to be inserted)*
-
----
-
-### Service Selection
-
-| Service | Rationale | Cost |
-|---------|----------|------|
-| **S3** | Static web hosting, no server, CDK integration | ~$0.01/month |
-| **API Gateway** | Managed REST API, auto-scaling, Lambda integration | $0 (1M req/month free) |
-| **Lambda** | Serverless, pay-per-request, ARM64 cheaper than x86 | $0 (1M req + 400K GBs free) |
-| **Cognito** | Managed user pool, social login support | $0 (50k MAU free) |
-| **DynamoDB** | NoSQL key-value, no management, auto-scale | $0 (25GB free) |
-| **SQS** | Queue between API and Step Functions, absorbs spikes | $0 (1M req free) |
-| **SNS** | Push notification when severe attack detected | $0 (1M pub free) |
-| **Step Functions** | Orchestrate simulation workflow | $0 (4k state transitions free) |
-| **Secrets Manager** | Securely store API key, auto-rotate | ~$0.40/month |
+![System Architecture](/images/2-Proposal/archi.png)
 
 ---
 
-### Security & IAM
+## Service Selection & Rationale
 
-**Principles:**
-1. **Principle of Least Privilege:** Each Lambda has minimum permissions (e.g., API handler cannot write SQS)
-2. **No hard-coded keys:** Google API key stored in Secrets Manager or Lambda env
-3. **S3 private by default:** Bucket only public for static web hosting
-4. **IAM Role:** Lambda receives role automatically via CDK, no access keys
+| Service | Purpose | Cost |
+|---------|---------|------|
+| **CloudFront** | Global CDN, HTTPS, low latency | ~$0.085/GB |
+| **S3** | Static website hosting for React app | ~$0.023/GB/mo |
+| **API Gateway (HTTP)** | Managed REST API, 70% cheaper than REST | $1.00/M calls |
+| **Lambda** | Serverless compute, pay-per-request | $0.20/M requests |
+| **Secrets Manager** | Securely store Google API key | ~$0.40/month |
+| **CloudWatch** | Logging and monitoring (default) | Free tier |
 
-**Example IAM Policy (API Handler):**
+---
+
+## Technology Stack
+
+### Frontend
+
+| Technology | Purpose |
+|------------|---------|
+| **React 18** | UI framework |
+| **ReactFlow** | Drag-and-drop topology editor |
+| **Vite** | Build tool, fast HMR |
+| **CSS** | Styling (dark mode theme) |
+
+### Backend
+
+| Technology | Purpose |
+|------------|---------|
+| **FastAPI** | REST API framework |
+| **Mangum** | AWS Lambda adapter for ASGI |
+| **Google Gemini API** | AI for topology generation, scanning, simulation |
+
+### Infrastructure
+
+| Technology | Purpose |
+|------------|---------|
+| **AWS CDK (Python)** | Infrastructure as Code |
+| **TypeScript/Python** | CDK stack definitions |
+
+---
+
+## Security Architecture
+
+### Secrets Management
+
+```python
+# Lambda reads API key from Secrets Manager at runtime
+# NOT stored in environment variables or code
+
+_api_key = os.environ.get('GOOGLE_API_KEY')
+if not _api_key:
+    secrets_client = boto3.client('secretsmanager')
+    resp = secrets_client.get_secret_value(SecretId='cloud-nexus/google-api-key')
+    _api_key = resp['SecretString']
+```
+
+### IAM Role Policy (Lambda)
+
 ```json
 {
   "Effect": "Allow",
   "Action": [
-    "secretsmanager:GetSecretValue",
-    "dynamodb:PutItem",
-    "dynamodb:GetItem",
-    "sqs:SendMessage",
-    "sns:Publish"
+    "secretsmanager:GetSecretValue"
   ],
-  "Resource": "arn:aws:...:CloudNexus-*"
+  "Resource": "arn:aws:secretsmanager:ap-southeast-1:<ACCOUNT>:secret:cloud-nexus/google-api-key"
 }
+```
+
+### Security Principles
+
+1. **Principle of Least Privilege:** Lambda only has permissions for Secrets Manager
+2. **No hardcoded credentials:** API key stored in Secrets Manager
+3. **HTTPS everywhere:** CloudFront → API Gateway → Lambda
+4. **IAM roles:** Lambda uses role-based access, no access keys
+
+---
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/health` | Health check |
+| POST | `/api/ai/generate` | Generate topology with AI |
+| POST | `/api/simulation/scan` | Scan for vulnerabilities |
+| POST | `/api/simulation/run` | Run attack simulation |
+| POST | `/api/topology/validate` | Validate topology |
+
+---
+
+## Frontend Architecture
+
+### State Management
+
+```javascript
+// Zustand-like store structure
+{
+  nodes: [],      // ReactFlow nodes
+  edges: [],      // ReactFlow edges
+  scenarios: [], // Attack scenarios from AI
+  logs: [],       // Terminal logs
+  // ... other state
+}
+```
+
+### AI Command Interface
+
+```
+$ generate a secure web application topology
+$ scan for vulnerabilities
+$ simulate SQL injection attack
+$ help
 ```
 
 ---
 
-### Scalability & Operations
+## Scalability & Performance
 
 | Aspect | Implementation |
-|--------|---------------|
-| **Scale** | Lambda auto-scales per request, SQS buffers spikes |
-| **Event-driven** | SQS → Step Functions → DynamoDB stores results |
-| **Async processing** | Scan request via SQS, does not block client |
-| **Logging** | CloudWatch Logs for Lambda |
-| **Monitoring** | CloudWatch Alarm on Lambda error rate, SQS depth |
-| **Alert** | SNS → Email when severe attack path detected |
+|--------|----------------|
+| **Scale** | Lambda auto-scales, no server to manage |
+| **CDN** | CloudFront caches globally |
+| **Static Hosting** | S3 handles all frontend traffic |
+| **Cold Start** | Lambda cold start ~4s, subsequent requests ~60ms |
+| **Memory** | Lambda 512MB, actual usage ~193MB |
+
+---
+
+## Cost Estimation
+
+| Resource | Free Tier | After Free Tier |
+|----------|-----------|-----------------|
+| Lambda | 1M req/mo | $0.20/M |
+| API Gateway | 1M calls/mo | $1.00/M |
+| S3 | 5GB | $0.023/GB/mo |
+| CloudFront | 1TB/mo | $0.085/GB |
+| Secrets Manager | - | ~$0.40/mo |
+
+**Total estimated cost for dev/testing:** < $1/month (within free tiers)
+

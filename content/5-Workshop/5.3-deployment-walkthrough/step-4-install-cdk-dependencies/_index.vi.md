@@ -1,20 +1,21 @@
 ---
-title : "Cài dependencies CDK"
-date : "2025-10-10"
+title : "Cài Dependencies CDK"
+date : "2026-07-09"
 weight : 4
 chapter : false
 pre : " <b> Step 4 </b> "
 ---
-# Step 4: Cài Dependencies CDK
+
 
 ---
 
-### Thao tác
+## Các Lệnh
 
 ```powershell
-cd cdk
-npm install
-cd ..
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+pip install -r requirements.txt
 ```
 
-📸 *[CHÈN ẢNH: Terminal cài đặt CDK dependencies]*
+---
+![Screenshot](/images/5-Workshop/step-4.png)
+

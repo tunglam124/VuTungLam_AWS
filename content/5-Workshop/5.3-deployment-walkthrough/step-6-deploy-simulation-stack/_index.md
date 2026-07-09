@@ -1,37 +1,42 @@
 ---
 title : "Deploy Simulation Stack"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 6
 chapter : false
 pre : " <b> Step 6 </b> "
 ---
-# Step 6: Deploy Simulation Stack
+
 
 ---
 
-### Description
+## Description
 
-Creates supporting services: SQS, DynamoDB, S3, Step Functions, SNS.
+This stack creates supporting services for the simulation system.
 
-### Commands
+---
+
+## Commands
 
 ```powershell
-cdk deploy CloudNexusSimulationStack --require-approval never
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+cdk deploy CloudNexus-Simulation --require-approval never
 ```
 
-### Expected Output
+---
+
+## Expected Output
 
 ```
-✅  CloudNexusSimulationStack
+✅  CloudNexus-Simulation
 Outputs:
-  CloudNexusSimulationStack.ResultBucketName = cloudnexus-results-<ACCOUNT_ID>-ap-southeast-1
-  CloudNexusSimulationStack.StateMachineArn = arn:aws:states:ap-southeast-1:<ACCOUNT_ID>:stateMachine:CloudNexus-SimOrchestrator
-  CloudNexusSimulationStack.AlertTopicArn = arn:aws:sns:ap-southeast-1:<ACCOUNT_ID>:CloudNexus-Alerts
+  CloudNexusSimulationStack.ResultBucketName = cloudnexus-results-<ACCOUNT_ID>-us-east-1
+  CloudNexusSimulationStack.StateMachineArn = arn:aws:states:us-east-1:<ACCOUNT_ID>:stateMachine:CloudNexus-SimOrchestrator
+  CloudNexusSimulationStack.AlertTopicArn = arn:aws:sns:us-east-1:<ACCOUNT_ID>:CloudNexus-Alerts
 ```
 
-📸 *[SCREENSHOT: cdk deploy SimulationStack output]*
+---
 
-### Resources Created
+## Resources Created
 
 | Resource | AWS Service | Purpose |
 |----------|-------------|---------|
@@ -40,3 +45,12 @@ Outputs:
 | `CloudNexus-ResultBucket` | S3 | Large result files |
 | `CloudNexus-SimOrchestrator` | Step Functions | Workflow orchestration |
 | `CloudNexus-Alerts` | SNS | Alert notifications |
+
+---
+
+![Screenshot](/images/5-Workshop/step-6.png)
+
+
+
+
+

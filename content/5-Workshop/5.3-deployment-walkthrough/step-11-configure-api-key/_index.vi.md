@@ -1,6 +1,6 @@
 ---
 title : "Cấu hình Google API Key"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 11
 chapter : false
 pre : " <b> Step 11 </b> "
@@ -9,20 +9,24 @@ pre : " <b> Step 11 </b> "
 
 ---
 
-Lambda cần Google API key để gọi Gemini. Có 2 cách:
+## Tổng Quan
 
-### Cách 1: Environment Variable (nhanh)
+Lambda cần Google API key để gọi Gemini. API key được lưu trong AWS Secrets Manager để bảo mật.
+
+---
+
+## Cách 1: Push Secret Script (Khuyến nghị)
 
 ```powershell
-aws lambda update-function-configuration --function-name CloudNexus-APIHandler `
-  --environment "Variables={
-    GOOGLE_API_KEY=<YOUR_GOOGLE_API_KEY>,
-    SCAN_QUEUE_URL=https://sqs.ap-southeast-1.amazonaws.com/<ACCOUNT_ID>/CloudNexus-ScanQueue,
-    GEMINI_MODEL=gemini-2.0-flash
-  }"
+cd C:\Users\ADMIN\Desktop\BC\DEMO
+.\scripts\push-secret.ps1
 ```
 
-### Cách 2: Secrets Manager (an toàn hơn)
+Script này đọc `backend/.env` và upload lên Secrets Manager.
+
+---
+
+## Cách 2: Thủ Công qua AWS CLI
 
 ```powershell
 aws secretsmanager put-secret-value `
@@ -30,13 +34,32 @@ aws secretsmanager put-secret-value `
   --secret-string "<YOUR_GOOGLE_API_KEY>"
 ```
 
-### Cách code đọc key
+---
 
-```python
-# ai_service.py
-_api_key = os.environ.get('GOOGLE_API_KEY')
-if not _api_key:
-    secrets_client = boto3.client('secretsmanager')
-    resp = secrets_client.get_secret_value(SecretId='cloud-nexus/google-api-key')
-    _api_key = resp['SecretString']
+## Cách 3: Cập nhật Lambda Environment Variable
+
+```powershell
+aws lambda update-function-configuration --function-name CloudNexus-BackendHandler-<SUFFIX> `
+  --environment "Variables={GOOGLE_API_KEY=<YOUR_KEY>}"
 ```
+
+---
+
+## Xác Minh Cấu Hình
+
+```powershell
+# Kiểm tra secret tồn tại
+aws secretsmanager describe-secret --secret-id cloud-nexus/google-api-key
+
+# Hoặc verify Lambda environment
+aws lambda get-function-configuration --function-name CloudNexus-BackendHandler-<SUFFIX> --query "Environment.Variables"
+```
+
+---
+
+
+![Screenshot](/images/5-Workshop/step-11.png)
+
+
+
+

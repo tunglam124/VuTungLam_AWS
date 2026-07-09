@@ -1,27 +1,28 @@
 ---
 title : "Configure AWS CLI"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 1
 chapter : false
 pre : " <b> Step 1 </b> "
 ---
-# Step 1: Configure AWS CLI
 
 ---
 
-### Commands
+## Commands
 
 ```powershell
 aws configure
 # AWS Access Key ID: ********
 # AWS Secret Access Key: ********
-# Default region name: ap-southeast-1
+# Default region name: us-east-1
 # Default output format: json
 
 aws sts get-caller-identity
 ```
 
-### Expected Output
+---
+
+## Expected Output
 
 ```json
 {
@@ -31,4 +32,9 @@ aws sts get-caller-identity
 }
 ```
 
-📸 *[SCREENSHOT: aws sts get-caller-identity output showing Account ID]*
+---
+
+![Screenshot](/images/5-Workshop/step-0.png)
+
+
+

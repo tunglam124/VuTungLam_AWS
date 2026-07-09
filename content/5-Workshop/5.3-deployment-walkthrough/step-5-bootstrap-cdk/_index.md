@@ -1,29 +1,42 @@
 ---
 title : "Bootstrap CDK"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 5
 chapter : false
 pre : " <b> Step 5 </b> "
 ---
-# Step 5: Bootstrap CDK
+
 
 ---
 
-### Purpose
+## Purpose
 
 Creates S3 bucket `cdk-hnb659fds-assets-<ACCOUNT>-<REGION>` to store templates and assets during deployment.
 
-### Commands
+---
+
+## Commands
 
 ```powershell
-cd cdk
-cdk bootstrap aws://<ACCOUNT_ID>/ap-southeast-1
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+cdk bootstrap aws://<ACCOUNT_ID>/us-east-1
 ```
 
-### Expected Output
+---
+
+## Expected Output
 
 ```
- ✅  Environment aws://<ACCOUNT_ID>/ap-southeast-1 bootstrapped.
+ ✅  Environment aws://<ACCOUNT_ID>/us-east-1 bootstrapped.
 ```
 
-📸 *[SCREENSHOT: cdk bootstrap success]*
+---
+
+
+![Screenshot](/images/5-Workshop/step-501.png)
+
+
+![Screenshot](/images/5-Workshop/step-502.png)
+
+
+

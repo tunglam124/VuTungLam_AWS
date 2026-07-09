@@ -1,43 +1,58 @@
 ---
 title : "Deploy API Stack"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 9
 chapter : false
 pre : " <b> Step 9 </b> "
 ---
-# Step 9: Deploy API Stack
+
 
 ---
 
-### Mô tả
+## Mô Tả
 
-Tạo API Gateway, Lambda (FastAPI), Cognito User Pool.
+Tạo API Gateway, Lambda (FastAPI + Mangum), và Secrets Manager.
 
-### Thao tác
+---
+
+## Các Lệnh
 
 ```powershell
-cd C:\<USER>\<PROJECT_DIR>\cdk
-cdk deploy CloudNexusAuthApiStack --require-approval never
+cd C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure
+cdk deploy CloudNexus-Backend --require-approval never
 ```
 
-### Expected output
+---
+
+## Kết Quả Mong Đợi
 
 ```
-✅  CloudNexusAuthApiStack
+✅  CloudNexus-Backend
 Outputs:
-  CloudNexusAuthApiStack.APIEndpoint = https://<API_ID>.execute-api.ap-southeast-1.amazonaws.com/prod/
-  CloudNexusAuthApiStack.UserPoolId = ap-southeast-1_XXXXX
-  CloudNexusAuthApiStack.ClientId = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  CloudNexus-Backend.ApiUrl = https://<API_ID>.execute-api.us-east-1.amazonaws.com/prod/
+  CloudNexus-Backend.FunctionName = CloudNexus-BackendHandler-<SUFFIX>
 ```
 
-📸 *[CHÈN ẢNH: cdk deploy AuthApiStack outputs]*
+---
 
-### Tài nguyên tạo ra
+## Tài Nguyên Đã Tạo
 
-| Resource | AWS Service | Mục đích |
-|----------|-------------|---------|
-| `CloudNexus-APIHandler` | Lambda | FastAPI backend |
-| `CloudNexus-PythonDeps` | Layer | Python deps |
-| `CloudNexusAPI` | API Gateway | REST endpoint |
-| `CloudNexusUserPool` | Cognito | User pool |
-| `cloud-nexus/google-api-key` | Secrets Manager | API key |
+| Tài nguyên | AWS Service | Mục đích |
+|------------|-------------|----------|
+| `CloudNexus-BackendHandler` | Lambda | FastAPI backend |
+| `CloudNexus-PythonDeps` | Layer | Python dependencies |
+| `CloudNexus-API` | API Gateway | REST endpoint |
+| `CloudNexus-Secrets` | Secrets Manager | Lưu trữ API key |
+
+---
+
+
+
+
+
+
+![Screenshot](/images/5-Workshop/step-9.png)
+
+
+---
+

@@ -1,27 +1,36 @@
 ---
 title : "Update Layer ARN in CDK"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 8
 chapter : false
 pre : " <b> Step 8 </b> "
 ---
-# Step 8: Update Layer ARN in CDK
+
 
 ---
 
-### Commands
+## Purpose
 
-Open the CDK stack file:
+Update the Lambda Layer ARN in the CDK stack with the newly published version number.
+
+---
+
+## Commands
+
+Open the backend stack file:
 
 ```powershell
-notepad C:\<USER>\<PROJECT_DIR>\cdk\lib\auth-api-stack.ts
+notepad C:\Users\ADMIN\Desktop\BC\DEMO\infrastructure\stacks\backend_stack.py
 ```
 
 Find this line:
-```typescript
-'arn:aws:lambda:ap-southeast-1:<ACCOUNT_ID>:layer:CloudNexus-PythonDeps:1'
+
+```python
+layer_arn = 'arn:aws:lambda:us-east-1:<ACCOUNT_ID>:layer:CloudNexus-PythonDeps:1'
 ```
 
 Update the version number at the end (e.g., `:1`, `:2`, `:3`, `:4`) depending on how many times you published the layer.
 
-📸 *[SCREENSHOT: Editor showing highlighted layer ARN line]*
+---
+
+

@@ -1,54 +1,67 @@
 ---
-title : "Ý tưởng & Mục tiêu"
-date : "2025-10-10"
+title : "Ý Tưởng & Mục Tiêu"
+date : "2026-07-09"
 weight : 1
 chapter : false
 pre : " <b> 5.1 </b> "
 ---
-# 5.1. Ý Tưởng & Mục Tiêu (1.0 điểm)
+
 
 ---
 
-### Bối Cảnh & Bài Toán
+## Bối Cảnh & Bài Toán
 
-**Cloud Nexus** là nền tảng mô phỏng và phân tích bảo mật mạng (Threat Modeling Platform) dành cho các chuyên gia an ninh mạng và kiến trúc sư hạ tầng. Hệ thống cho phép người dùng vẽ sơ đồ mạng (network topology), sau đó sử dụng AI (Google Gemini) để tự động phát hiện lỗ hổng, mô phỏng đường đi tấn công, và đề xuất biện pháp phòng thủ.
+**Cloud Nexus** là nền tảng mô phỏng và phân tích bảo mật mạng (Threat Modeling Platform) được thiết kế cho các chuyên gia an ninh mạng và kiến trúc sư hạ tầng. Nền tảng cung cấp môi trường tương tác trực quan nơi người dùng có thể thiết kế topology mạng bằng cách kéo-thả các thành phần, sau đó sử dụng AI (Google Gemini) để tự động phân tích lỗ hổng bảo mật, mô phỏng các đường đi tấn công tiềm năng, và nhận các khuyến nghị phòng thủ khả thi.
 
-**Khách hàng mục tiêu:**
-- Chuyên gia bảo mật (Security Analysts)
-- Kiến trúc sư hạ tầng (Cloud Architects)
-- Sinh viên học về an ninh mạng (Cybersecurity Students)
+**Đối tượng người dùng:**
+- Chuyên gia bảo mật cần đánh giá lỗ hổng tự động
+- Kiến trúc sư đám mây thiết kế topology mạng an toàn
+- Sinh viên học về an ninh mạng tìm hiểu mô hình tấn công/phòng thủ
+- Chuyên gia kiểm thử xâm nhập lập kế hoạch chiến lược
 
-**Vấn đề giải quyết:**
+---
+
+## Vấn Đề Được Giải Quyết
+
 | Vấn đề | Giải pháp |
-|--------|----------|
-| Phát hiện lỗ hổng mạng thủ công tốn thời gian | AI tự động quét topology |
-| Khó hình dung đường đi tấn công | Mô phỏng trực quan trên ReactFlow |
+|--------|------------|
+| Phát hiện lỗ hổng mạng thủ công tốn thời gian | AI tự động quét topology bằng Gemini |
+| Khó hình dung và hiểu đường đi tấn công | Mô phỏng hoạt hình trên canvas ReactFlow |
 | Thiết lập môi trường test phức tạp | Serverless trên AWS, không cần quản lý server |
-| Không có công cụ đánh giá phòng thủ | So sánh attack path trước/sau khi thêm defense |
+| Thiếu công cụ đánh giá phòng thủ chuẩn | So sánh attack path trước/sau khi thêm defense |
+| Thiếu công cụ học tập tương tác | Giao diện terminal thời gian thực với lệnh AI |
 
 ---
 
-### Mục Tiêu Cụ Thể
+## Mục Tiêu Dự Án
 
 | Tiêu chí | Mô tả |
-|----------|-------|
-| **Output** | REST API endpoints + Web Dashboard (React) |
-| **AI Integration** | Google Gemini tạo topology, phân tích lỗ hổng, mô phỏng tấn công |
-| **Alert** | SNS notification khi phát hiện tấn công nghiêm trọng |
-| **Serverless** | Toàn bộ backend trên Lambda + API Gateway |
-| **Infra as Code** | AWS CDK — deploy / destroy bằng 1 lệnh |
-
-**Tiêu chí đánh giá thành công:**
-1. Web dashboard load được từ S3 static hosting
-2. API Gateway trả về `{"status":"ok"}` tại `/api/health`
-3. Lambda gọi được Google Gemini và trả về topology JSON hợp lệ
-4. Toàn bộ hạ tầng deploy bằng `cdk deploy` và xóa bằng `cdk destroy`
+|----------|--------|
+| **Trình chỉnh sửa trực quan** | ReactFlow-based với kéo-thả xây dựng topology |
+| **Tích hợp AI** | Google Gemini tạo topology, phân tích lỗ hổng, mô phỏng tấn công |
+| **Phản hồi thời gian thực** | Giao diện terminal cho lệnh AI và kết quả |
+| **Serverless Backend** | Lambda + API Gateway (FastAPI + Mangum) |
+| **Hạ tầng như Code** | AWS CDK — deploy/destroy bằng lệnh đơn |
+| **Lưu trữ API Key an toàn** | AWS Secrets Manager (không hardcode) |
+| **CDN toàn cầu** | CloudFront truy cập low-latency toàn cầu |
 
 ---
 
-### Phù Hợp Chương Trình FCAJ / AWS
+## Tiêu Chí Đánh Giá Thành Công
 
-- **Serverless-first:** Lambda, API Gateway, DynamoDB, SQS, SNS, Step Functions
-- **Infrastructure as Code:** AWS CDK (TypeScript)
-- **Bảo mật:** IAM Role, Secrets Manager, Cognito, Principle of Least Privilege
-- **Chi phí thấp:** Free tier cho các service cốt lõi
+1. Frontend load từ CloudFront CDN: `https://d3rs3evkmfvesp.cloudfront.net/`
+2. API Gateway trả về `{"status":"ok"}` tại `/api/health`
+3. Lambda gọi Google Gemini và trả về topology JSON hợp lệ
+4. Mô phỏng tấn công hiển thị đường đi tấn công hoạt hình trên canvas
+5. Toàn bộ hạ tầng deploy bằng `cdk deploy` và xóa bằng `cdk destroy`
+
+---
+
+## Phù Hợp với Best Practices Kiến Trúc Đám Mây
+
+- **Serverless-first:** Lambda, API Gateway, S3, CloudFront
+- **Hạ tầng như Code:** AWS CDK (Python)
+- **Bảo mật:** Secrets Manager, IAM roles, không hardcode credentials
+- **Tối ưu chi phí:** Free tier cho service cốt lõi, pay-per-use
+- **Phân phối toàn cầu:** CloudFront CDN với HTTPS
+

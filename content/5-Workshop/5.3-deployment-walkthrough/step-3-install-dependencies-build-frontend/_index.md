@@ -1,34 +1,40 @@
 ---
 title : "Install Dependencies & Build Frontend"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 3
 chapter : false
 pre : " <b> Step 3 </b> "
 ---
-# Step 3: Install Dependencies & Build Frontend
+
 
 ---
 
-### Commands
+## Commands
 
 ```powershell
-cd C:\<USER>\<PROJECT_DIR>
+cd C:\Users\ADMIN\Desktop\BC\DEMO
 npm install
 ```
 
-### Expected Output
+---
+
+## Expected Output
 
 ```
 up to date, audited 300+ packages in 5s
 ```
 
-### Build Frontend
+---
+
+## Build Frontend
 
 ```powershell
 npm run build
 ```
 
-### Expected Output
+---
+
+## Build Output
 
 ```
 dist/ generated successfully:
@@ -37,11 +43,16 @@ dist/ generated successfully:
   assets/index-xxxx.css
 ```
 
-### Verify
+---
+
+## Verify Build
 
 ```powershell
 Test-Path dist/index.html
 # → True
 ```
 
-📸 *[SCREENSHOT: Terminal showing successful build process]*
+---
+
+![Screenshot](/images/5-Workshop/step-3.png)
+

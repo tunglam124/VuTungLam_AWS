@@ -1,20 +1,19 @@
 ---
 title : "Điều kiện tiên quyết"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 0
 chapter : false
 pre : " <b> Step 0 </b> "
 ---
-# Step 0: Điều Kiện Tiên Quyết
 
 ---
 
-### Công cụ cần cài đặt
+## Công Cụ Cần Thiết
 
 | Công cụ | Yêu cầu | Cài đặt |
 |---------|---------|---------|
 | AWS Account | Active | [Đăng ký AWS](https://aws.amazon.com) |
-| Region | `ap-southeast-1` | Chọn trong AWS Console |
+| Region | `us-east-1` | Chọn trong AWS Console |
 | AWS CLI | v2.x | `winget install Amazon.AWSCLI` |
 | Node.js | v18+ | `winget install OpenJS.NodeJS.LTS` |
 | Python | 3.12 | `winget install Python.Python.3.12` |
@@ -23,7 +22,9 @@ pre : " <b> Step 0 </b> "
 | Git | Latest | `winget install Git.Git` |
 | Google API Key | Gemini free | [Lấy tại đây](https://aistudio.google.com/app/apikey) |
 
-### Kiểm tra cài đặt
+---
+
+## Xác Minh Cài Đặt
 
 ```powershell
 aws --version
@@ -33,9 +34,13 @@ cdk --version
 python --version
 ```
 
-📸 *[CHÈN ẢNH: Terminal hiển thị version các công cụ]*
+---
 
-### Quyền IAM cần thiết
+![Screenshot](/images/5-Workshop/step-0.png)
+
+---
+
+## Quyền IAM Cần Thiết
 
 ```json
 {
@@ -53,6 +58,9 @@ python --version
 }
 ```
 
-### Chi phí dự kiến
+---
+
+## Chi Phí Ước Tính
 
 > Tất cả service trong bài đều nằm trong AWS Free Tier hoặc chi phí rất thấp (< $1/tháng nếu không sử dụng nhiều).
+

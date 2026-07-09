@@ -1,34 +1,40 @@
 ---
-title : "Cài dependencies & Build Frontend"
-date : "2025-10-10"
+title : "Cài Dependencies & Build Frontend"
+date : "2026-07-09"
 weight : 3
 chapter : false
 pre : " <b> Step 3 </b> "
 ---
-# Step 3: Cài Dependencies & Build Frontend
+
 
 ---
 
-### Thao tác
+## Các Lệnh
 
 ```powershell
-cd C:\<USER>\<PROJECT_DIR>
+cd C:\Users\ADMIN\Desktop\BC\DEMO
 npm install
 ```
 
-### Expected output
+---
+
+## Kết Quả Mong Đợi
 
 ```
 up to date, audited 300+ packages in 5s
 ```
 
-### Build frontend
+---
+
+## Build Frontend
 
 ```powershell
 npm run build
 ```
 
-### Expected output
+---
+
+## Build Output
 
 ```
 dist/ generated successfully:
@@ -37,11 +43,16 @@ dist/ generated successfully:
   assets/index-xxxx.css
 ```
 
-### Kiểm tra
+---
+
+## Xác Minh Build
 
 ```powershell
 Test-Path dist/index.html
 # → True
 ```
 
-📸 *[CHÈN ẢNH: Terminal hiển thị quá trình build thành công]*
+---
+
+![Screenshot](/images/5-Workshop/step-3.png)
+

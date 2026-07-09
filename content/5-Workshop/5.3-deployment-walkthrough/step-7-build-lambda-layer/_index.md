@@ -1,47 +1,36 @@
 ---
 title : "Build Lambda Layer"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 7
 chapter : false
 pre : " <b> Step 7 </b> "
 ---
-# Step 7: Build Lambda Layer
+
 
 ---
 
-Contains Python dependencies (google-genai, FastAPI, pydantic, etc.) for Lambda.
+## Purpose
+
+Contains Python dependencies (google-genai, FastAPI, pydantic, etc.) for Lambda execution.
 
 ---
 
-### 7.1 Download wheels for Python 3.12 ARM64
+## 7.1 Download wheels for Python 3.12 ARM64
 
 ```powershell
-$wheelDir = "C:\<USER>\AppData\Local\Temp\<TEMP_DIR>\wheels"
+$wheelDir = "C:\Users\ADMIN\AppData\Local\Temp\lambda-layer\wheels"
 New-Item -ItemType Directory -Path $wheelDir -Force | Out-Null
 
-pip download -r cdk/lambdas/api/requirements.txt --dest $wheelDir `
+pip download -r backend/requirements.txt --dest $wheelDir `
   --platform manylinux2014_aarch64 --python-version 3.12 --only-binary :all:
 ```
 
-| Package | Version | Notes |
-|---------|---------|-------|
-| fastapi | 0.139.0 | Pure Python |
-| mangum | 0.21.0 | Pure Python |
-| pydantic | 2.13.4 | Pure Python |
-| pydantic-core | 2.46.4 | **Native** (.so) |
-| google-genai | 2.10.0 | Pure Python |
-| cffi | 2.0.0 | **Native** (.so) |
-| cryptography | 49.0.0 | **Native** (.so) |
-| websockets | 16.0 | **Native** (.so) |
-
-> **⚠️ Important:** `.so` files must match **Python 3.12** (`cp312`) and **ARM64** (`aarch64`).
-
 ---
 
-### 7.2 Extract and package Layer
+## 7.2 Extract and package Layer
 
 ```powershell
-$baseDir = "C:\<USER>\AppData\Local\Temp\<TEMP_DIR>"
+$baseDir = "C:\Users\ADMIN\AppData\Local\Temp\lambda-layer"
 $extractDir = Join-Path $baseDir "python_tmp"
 Remove-Item -Recurse -Force $extractDir -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Path $extractDir -Force | Out-Null
@@ -73,24 +62,9 @@ Remove-Item $zipPath -Force -ErrorAction SilentlyContinue
 Compress-Archive -Path "$layerDir\*" -DestinationPath $zipPath -Force
 ```
 
-**Verify .so files:**
-```powershell
-$zip = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
-$zip.Entries | Where-Object { $_.FullName -like "*.so*" } | Format-Table FullName, Length
-$zip.Dispose()
-```
-
-Expected:
-```
-python/pydantic_core/_pydantic_core.cpython-312-aarch64-linux-gnu.so
-python/_cffi_backend.cpython-312-aarch64-linux-gnu.so
-python/websockets/speedups.cpython-312-aarch64-linux-gnu.so
-...
-```
-
 ---
 
-### 7.3 Publish Layer to AWS
+## 7.3 Publish Layer to AWS
 
 ```powershell
 aws lambda publish-layer-version --layer-name CloudNexus-PythonDeps `
@@ -99,9 +73,23 @@ aws lambda publish-layer-version --layer-name CloudNexus-PythonDeps `
   --query "LayerVersionArn" --output text
 ```
 
-**Expected:**
-```
-arn:aws:lambda:ap-southeast-1:<ACCOUNT_ID>:layer:CloudNexus-PythonDeps:1
+---
+
+## Verify .so Files
+
+```powershell
+$zip = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
+$zip.Entries | Where-Object { $_.FullName -like "*.so*" } | Format-Table FullName, Length
+$zip.Dispose()
 ```
 
-📸 *[SCREENSHOT: Publish layer success]*
+**Expected:**
+```
+python/pydantic_core/_pydantic_core.cpython-312-aarch64-linux-gnu.so
+python/_cffi_backend.cpython-312-aarch64-linux-gnu.so
+python/websockets/speedups.cpython-312-aarch64-linux-gnu.so
+```
+
+---
+![Screenshot](/images/5-Workshop/step-7.png)
+

@@ -1,45 +1,58 @@
 ---
 title : "Tải mã nguồn"
-date : "2025-10-10"
+date : "2026-07-09"
 weight : 2
 chapter : false
 pre : " <b> Step 2 </b> "
 ---
-# Step 2: Tải Mã Nguồn
+
 
 ---
 
-### Thao tác
+## Các Lệnh
 
 ```powershell
-cd C:\<USER>\<PROJECT_DIR>
+cd C:\Users\ADMIN\Desktop\BC\DEMO
 Get-ChildItem -Directory
 ```
 
-### Cấu trúc dự án
+---
+
+## Cấu Trúc Dự Án
 
 ```
 DEMO/
-├── cdk/                    # AWS CDK infrastructure code
-│   ├── bin/app.ts          # Entry point
-│   ├── lib/                # Stack definitions
-│   │   ├── config.ts
-│   │   ├── simulation-stack.ts
-│   │   ├── auth-api-stack.ts
-│   │   └── frontend-stack.ts
-│   ├── lambdas/api/        # Lambda source code
-│   │   ├── main.py
-│   │   ├── ai_service.py
-│   │   └── requirements.txt
-│   ├── lambdas/simulation/
-│   ├── lambdas/notification/
-│   ├── package.json
-│   └── tsconfig.json
-├── src/                    # React frontend source
-├── public/
+├── src/                    # React frontend source (Vite)
+│   ├── components/
+│   ├── hooks/
+│   │   ├── useAI.js        # Tích hợp AI
+│   │   └── useSimulation.js # Logic mô phỏng
+│   ├── store/
+│   │   └── useStore.js     # Quản lý state
+│   └── api.js
+├── backend/                # FastAPI backend
+│   ├── main.py             # FastAPI app
+│   ├── ai_service.py       # Tích hợp Gemini
+│   ├── handler.py          # Lambda entry (Mangum)
+│   ├── .env                # API keys (KHÔNG commit)
+│   └── requirements.txt
+├── infrastructure/         # AWS CDK code
+│   ├── app.py              # CDK entry point
+│   ├── stacks/
+│   │   ├── frontend_stack.py    # S3 + CloudFront
+│   │   ├── backend_stack.py    # Lambda + API Gateway
+│   │   └── secrets_stack.py    # Secrets Manager
+│   ├── cdk.json
+│   └── requirements.txt
+├── scripts/
+│   ├── deploy.ps1          # Deployment Windows
+│   ├── deploy.sh           # Deployment Mac/Linux
+│   ├── push-secret.ps1     # Đẩy API key lên Secrets Manager
+│   └── teardown.ps1        # Xóa AWS resources
 ├── dist/                   # Frontend build output
-├── package.json
-└── baocao/                 # Report files
+└── package.json
 ```
 
-📸 *[CHÈN ẢNH: Cấu trúc thư mục dự án trên terminal]*
+---
+
+![Screenshot](/images/5-Workshop/step-2.png)
