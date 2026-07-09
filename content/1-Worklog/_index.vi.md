@@ -22,10 +22,10 @@ pre: " <b> 1. </b> "
 
 **Tuần 8:** [Terraform (Variables) & Xây dựng quy trình CI/CD (CodePipeline, CodeDeploy)](1.8-week8/)
 
-**Tuần 9:** [Tìm hiểu các Công cụ CI/CD: Jenkins, Docker, và AWS CodeDeploy](1.9-week9/)
+**Tuần 9:** [AI Simulation Engine — Gemini Prompts & Endpoint mô phỏng](1.9-week9/)
 
-**Tuần 10:** [Giới thiệu về Kubernetes (Pods, Deployments) & Backup (Velero)](1.10-week10/)
+**Tuần 10:** [React Frontend (ReactFlow, UI Components) & ECS Fargate / Khám phá K8s](1.10-week10/)
 
-**Tuần 11:** [K8s Nâng cao (HPA, NetworkPolicy, RBAC) & ALB Routing Nâng cao](1.11-week11/)
+**Tuần 11:** [Hạ tầng Serverless với CDK — Stacks, Lambda, API Gateway, Secrets Manager](1.11-week11/)
 
-**Tuần 12:** [ALB Nâng cao (WebSocket, Sticky Sessions) & Kiểm thử Hiệu năng](1.12-week12/)
+**Tuần 12:** [Triển khai Frontend (S3 + CloudFront), Fix CORS & Tích hợp AI End-to-End](1.12-week12/)

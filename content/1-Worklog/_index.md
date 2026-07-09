@@ -22,10 +22,10 @@ pre: " <b> 1. </b> "
 
 **Week 8:** [Terraform (Variables) & Building a CI/CD Pipeline (CodePipeline, CodeDeploy)](1.8-week8/)
 
-**Week 9:** [CI/CD Tools Exploration: Jenkins, Docker, and AWS CodeDeploy](1.9-week9/)
+**Week 9:** [AI Simulation Engine — Gemini Prompts & Simulation Endpoints](1.9-week9/)
 
-**Week 10:** [Kubernetes Introduction (Pods, Deployments) & Backup (Velero)](1.10-week10/)
+**Week 10:** [React Frontend (ReactFlow, UI Components) & ECS Fargate / K8s Exploration](1.10-week10/)
 
-**Week 11:** [Advanced K8s (HPA, NetworkPolicy, RBAC) & Advanced ALB Routing](1.11-week11/)
+**Week 11:** [CDK Serverless Infrastructure — Stacks, Lambda, API Gateway, Secrets Manager](1.11-week11/)
 
-**Week 12:** [Advanced ALB (WebSocket, Sticky Sessions) & Performance Testing](1.12-week12/)
+**Week 12:** [Frontend Deployment (S3 + CloudFront), CORS Fix & End-to-End AI Integration](1.12-week12/)
