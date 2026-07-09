@@ -21,11 +21,11 @@ pre: " <b> 1.4 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Sandbox & Monitoring Setup**: Create a secure IAM testing environment and configure AWS CloudTrail to log all Management events. | 29/09/2025 | 29/09/2025 | |
-| 2 (Tue) | **Alert Pipeline Setup**: Configure Amazon SNS notification channel and handle cross-region architecture synchronization to us-east-1. | 30/09/2025 | 30/09/2025 | |
-| 3 (Wed) | **Event Filter Construction**: Analyze logs and write Event Pattern JSON on Amazon EventBridge to catch privilege escalation behavior. | 01/10/2025 | 01/10/2025 | |
-| 4 (Thu) | **Automation Source Code Development**: Write Python script for AWS Lambda to parse JSON, automatically revoke permissions, and send alerts. | 02/10/2025 | 02/10/2025 | |
-| 5 (Fri) | **Integration & Testing**: Connect EventBridge to Lambda, conduct Live Test of unauthorized Admin privilege assignment, debug via CloudWatch. | 03/10/2025 | 03/10/2025 | |
+| 1 (Mon) | **Sandbox & Monitoring Setup**: Create a secure IAM testing environment and configure AWS CloudTrail to log all Management events. | 11/05/2026 | 11/05/2026 | |
+| 2 (Tue) | **Alert Pipeline Setup**: Configure Amazon SNS notification channel and handle cross-region architecture synchronization to us-east-1. | 12/05/2026 | 12/05/2026 | |
+| 3 (Wed) | **Event Filter Construction**: Analyze logs and write Event Pattern JSON on Amazon EventBridge to catch privilege escalation behavior. | 13/05/2026 | 13/05/2026 | |
+| 4 (Thu) | **Automation Source Code Development**: Write Python script for AWS Lambda to parse JSON, automatically revoke permissions, and send alerts. | 14/05/2026 | 14/05/2026 | |
+| 5 (Fri) | **Integration & Testing**: Connect EventBridge to Lambda, conduct Live Test of unauthorized Admin privilege assignment, debug via CloudWatch. | 15/05/2026 | 15/05/2026 | |
 
 ---
 

@@ -23,11 +23,11 @@ pre: " <b> 1.11 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | Thiết lập CDK project với TypeScript: khởi tạo cdk app, cấu hình TypeScript config, định nghĩa CloudNexusStack; tìm hiểu Python 3.12 ARM64 Lambda compatibility. | 22/06/2026 | 22/06/2026 | |
-| 2 (Thứ Ba) | Xây dựng **Simulation Stack**: tạo SQS queue (đệm scan requests), DynamoDB table (lưu topology + kết quả), S3 bucket (artifacts), Step Functions state machine (điều phối), SNS topic (cảnh báo). | 23/06/2026 | 23/06/2026 | |
-| 3 (Thứ Tư) | Xây dựng **Auth Stack** với Cognito User Pool; xây dựng **Secrets Stack**: tạo Secrets Manager secret cho GOOGLE_API_KEY; tìm hiểu Lambda Layer structure cho Python dependencies. | 24/06/2026 | 24/06/2026 | |
-| 4 (Thứ Năm) | Tạo **Lambda Layer** cho Python 3.12 ARM64: đóng gói fastapi, mangum, google-genai, pydantic vào cấu trúc layer chuẩn; phát triển Lambda function với FastAPI app + Mangum handler. | 25/06/2026 | 25/06/2026 | |
-| 5 (Thứ Sáu) | Lắp ráp **API Stack**: cấu hình API Gateway HTTP API, IAM roles, Cognito authorizer; tích hợp tất cả output (bucket names, queue URLs, table ARNs) qua CDK context; chạy `cdk synth` và `cdk deploy` lần đầu. | 26/06/2026 | 26/06/2026 | |
+| 1 (Thứ Hai) | Thiết lập CDK project với TypeScript: khởi tạo cdk app, cấu hình TypeScript config, định nghĩa CloudNexusStack; tìm hiểu Python 3.12 ARM64 Lambda compatibility. | 29/06/2026 | 29/06/2026 | |
+| 2 (Thứ Ba) | Xây dựng **Simulation Stack**: tạo SQS queue (đệm scan requests), DynamoDB table (lưu topology + kết quả), S3 bucket (artifacts), Step Functions state machine (điều phối), SNS topic (cảnh báo). | 30/06/2026 | 30/06/2026 | |
+| 3 (Thứ Tư) | Xây dựng **Auth Stack** với Cognito User Pool; xây dựng **Secrets Stack**: tạo Secrets Manager secret cho GOOGLE_API_KEY; tìm hiểu Lambda Layer structure cho Python dependencies. | 01/07/2026 | 01/07/2026 | |
+| 4 (Thứ Năm) | Tạo **Lambda Layer** cho Python 3.12 ARM64: đóng gói fastapi, mangum, google-genai, pydantic vào cấu trúc layer chuẩn; phát triển Lambda function với FastAPI app + Mangum handler. | 02/07/2026 | 02/07/2026 | |
+| 5 (Thứ Sáu) | Lắp ráp **API Stack**: cấu hình API Gateway HTTP API, IAM roles, Cognito authorizer; tích hợp tất cả output (bucket names, queue URLs, table ARNs) qua CDK context; chạy `cdk synth` và `cdk deploy` lần đầu. | 03/07/2026 | 03/07/2026 | |
 
 ---
 

@@ -25,8 +25,8 @@ pre: " <b> 1.1 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Sáu) | Tham gia kickoff "FCAJ - First Cloud AI Journey": tìm hiểu về chương trình, 6 nguyên tắc cốt lõi (Builder & Troubleshooter, Teamwork, Resilience, Hands-on & Knowledge Sharing, Invest in Yourself, Lifelong Learning) và cấu trúc học tập. | 17/04/2026 | 17/04/2026 | |
-| 2 (Thứ Bảy) | Đọc thông tin về chương trình FCAJ và AWS; tạo tài khoản AWS; hoàn thành task nhận 100$ credit; tìm hiểu dịch vụ EC2, VPC. | 18/04/2026 | 18/04/2026 | https://awsstudygroup.com/ |
+| 1 (Thứ Sáu) | Tham gia kickoff "FCAJ - First Cloud AI Journey": tìm hiểu về chương trình, 6 nguyên tắc cốt lõi (Builder & Troubleshooter, Teamwork, Resilience, Hands-on & Knowledge Sharing, Invest in Yourself, Lifelong Learning) và cấu trúc học tập. | 20/04/2026 | 20/04/2026 | |
+| 2 (Thứ Bảy) | Đọc thông tin về chương trình FCAJ và AWS; tạo tài khoản AWS; hoàn thành task nhận 100$ credit; tìm hiểu dịch vụ EC2, VPC. | 21/04/2026 | 21/04/2026 | https://awsstudygroup.com/ |
 | 3 (Thứ Hai) | Học Module 01-01: Điện toán đám mây, Lợi ích, Hạ tầng toàn cầu AWS (Data Center, AZ, Region, Edge Location, Local Zone), các dịch vụ cơ bản (AWS WAF, Route 53). | 20/04/2026 | 20/04/2026 | https://www.youtube.com/watch?v=qVCF7UjYC5s |
 | 4 (Thứ Ba) | Học Module 01-02: AWS Management Console, Support Center, CLI, SDK; làm Lab IAM (tạo User Group, Admin User, AdminRole, OperatorUser). | 21/04/2026 | 21/04/2026 | https://000002.awsstudygroup.com/ |
 | 5 (Thứ Ba) | Học Module 01-03: Xu hướng GenAI, Spec-Driven Development, Kiro IDE, Kiro CLI, Kiro Power, Free Tier; cài đặt Kiro IDE. | 21/04/2026 | 21/04/2026 | https://000180.awsstudygroup.com/ |

@@ -22,11 +22,11 @@ pre: " <b> 1.6 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Learn CloudFormation & YAML**: Study sections (Parameters, Resources) and YAML syntax. Write a simple S3 Bucket template. | 18/05/2026 | 18/05/2026 | |
-| 2 (Tue) | **Deploy Stack & Parameters**: Deploy the S3 stack. Add `Parameters` (e.g., custom bucket name) to the template and learn to update the stack. | 19/05/2026 | 19/05/2026 | |
-| 3 (Wed) | **Write Network Template**: Write a new template for network infrastructure (VPC, Public Subnet, IGW, Route Table). Use `Outputs`. | 20/05/2026 | 20/05/2026 | |
-| 4 (Thu) | **Write EC2 Template**: Extend the network template, adding `Resources` for a Security Group (SSH, HTTP) and an EC2 instance (specifying AMI). | 21/05/2026 | 21/05/2026 | |
-| 5 (Fri) | **Deploy & Cleanup**: Deploy the complete stack (VPC + EC2). Test SSH/HTTP access. Learn to delete the stack (`aws cloudformation delete-stack`). | 22/05/2026 | 22/05/2026 | |
+| 1 (Mon) | **Learn CloudFormation & YAML**: Study sections (Parameters, Resources) and YAML syntax. Write a simple S3 Bucket template. | 25/05/2026 | 25/05/2026 | |
+| 2 (Tue) | **Deploy Stack & Parameters**: Deploy the S3 stack. Add `Parameters` (e.g., custom bucket name) to the template and learn to update the stack. | 26/05/2026 | 26/05/2026 | |
+| 3 (Wed) | **Write Network Template**: Write a new template for network infrastructure (VPC, Public Subnet, IGW, Route Table). Use `Outputs`. | 27/05/2026 | 27/05/2026 | |
+| 4 (Thu) | **Write EC2 Template**: Extend the network template, adding `Resources` for a Security Group (SSH, HTTP) and an EC2 instance (specifying AMI). | 28/05/2026 | 28/05/2026 | |
+| 5 (Fri) | **Deploy & Cleanup**: Deploy the complete stack (VPC + EC2). Test SSH/HTTP access. Learn to delete the stack (`aws cloudformation delete-stack`). | 29/05/2026 | 29/05/2026 | |
 
 ### **References / Materials**
 

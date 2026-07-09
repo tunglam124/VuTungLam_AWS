@@ -25,8 +25,8 @@ pre: " <b> 1.1 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Fri) | Attend the "FCAJ - First Cloud AI Journey" kickoff: learn about the program, 6 core principles (Builder & Troubleshooter, Teamwork, Resilience, Hands-on & Knowledge Sharing, Invest in Yourself, Lifelong Learning), and the learning structure. | 17/04/2026 | 17/04/2026 | |
-| 2 (Sat) | Read about the FCAJ program and AWS; create an AWS account; complete tasks to claim $100 credit; explore EC2 and VPC services. | 18/04/2026 | 18/04/2026 | https://awsstudygroup.com/ |
+| 1 (Fri) | Attend the "FCAJ - First Cloud AI Journey" kickoff: learn about the program, 6 core principles (Builder & Troubleshooter, Teamwork, Resilience, Hands-on & Knowledge Sharing, Invest in Yourself, Lifelong Learning), and the learning structure. | 20/04/2026 | 20/04/2026 | |
+| 2 (Sat) | Read about the FCAJ program and AWS; create an AWS account; complete tasks to claim $100 credit; explore EC2 and VPC services. | 21/04/2026 | 21/04/2026 | https://awsstudygroup.com/ |
 | 3 (Mon) | Study Module 01-01: Cloud Computing, Benefits, AWS Global Infrastructure (Data Center, AZ, Region, Edge Location, Local Zone), basic services (AWS WAF, Route 53). | 20/04/2026 | 20/04/2026 | https://www.youtube.com/watch?v=qVCF7UjYC5s |
 | 4 (Tue) | Study Module 01-02: AWS Management Console, Support Center, CLI, SDK; complete IAM Lab (create User Group, Admin User, AdminRole, OperatorUser). | 21/04/2026 | 21/04/2026 | https://000002.awsstudygroup.com/ |
 | 5 (Tue) | Study Module 01-03: GenAI trends, Spec-Driven Development, Kiro IDE, Kiro CLI, Kiro Power, Free Tier; install Kiro IDE. | 21/04/2026 | 21/04/2026 | https://000180.awsstudygroup.com/ |

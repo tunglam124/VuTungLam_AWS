@@ -22,11 +22,11 @@ pre: " <b> 1.6 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu CloudFormation & YAML**: Nghiên cứu các section (Parameters, Resources, Outputs) và cú pháp YAML. Viết template đơn giản tạo S3 Bucket. | 18/05/2026 | 18/05/2026 | |
-| 2 (Thứ Ba) | **Triển khai Stack & Parameters**: Deploy stack S3. Thêm `Parameters` (ví dụ: tùy chỉnh tên Bucket) vào template và học cách cập nhật stack. | 19/05/2026 | 19/05/2026 | |
-| 3 (Thứ Tư) | **Viết template Mạng**: Viết template mới tạo hạ tầng mạng (VPC, Public Subnet, IGW, Route Table). Sử dụng `Outputs` để hiển thị IDs. | 20/05/2026 | 20/05/2026 | |
-| 4 (Thứ Năm) | **Viết template EC2**: Mở rộng template mạng, thêm `Resources` cho Security Group (SSH, HTTP) và EC2 instance (chỉ định AMI, Type). | 21/05/2026 | 21/05/2026 | |
-| 5 (Thứ Sáu) | **Triển khai & Dọn dẹp**: Deploy stack hoàn chỉnh (VPC + Subnet + EC2). Kiểm tra SSH/HTTP. Học cách xóa stack (`aws cloudformation delete-stack`). | 22/05/2026 | 22/05/2026 | |
+| 1 (Thứ Hai) | **Tìm hiểu CloudFormation & YAML**: Nghiên cứu các section (Parameters, Resources, Outputs) và cú pháp YAML. Viết template đơn giản tạo S3 Bucket. | 25/05/2026 | 25/05/2026 | |
+| 2 (Thứ Ba) | **Triển khai Stack & Parameters**: Deploy stack S3. Thêm `Parameters` (ví dụ: tùy chỉnh tên Bucket) vào template và học cách cập nhật stack. | 26/05/2026 | 26/05/2026 | |
+| 3 (Thứ Tư) | **Viết template Mạng**: Viết template mới tạo hạ tầng mạng (VPC, Public Subnet, IGW, Route Table). Sử dụng `Outputs` để hiển thị IDs. | 27/05/2026 | 27/05/2026 | |
+| 4 (Thứ Năm) | **Viết template EC2**: Mở rộng template mạng, thêm `Resources` cho Security Group (SSH, HTTP) và EC2 instance (chỉ định AMI, Type). | 28/05/2026 | 28/05/2026 | |
+| 5 (Thứ Sáu) | **Triển khai & Dọn dẹp**: Deploy stack hoàn chỉnh (VPC + Subnet + EC2). Kiểm tra SSH/HTTP. Học cách xóa stack (`aws cloudformation delete-stack`). | 29/05/2026 | 29/05/2026 | |
 
 ### **Tài liệu tham khảo**
 

@@ -22,11 +22,11 @@ pre: " <b> 1.8 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Write Dockerfiles for frontend (React + Vite) and backend (FastAPI + Uvicorn); create docker-compose.yml for multi-container orchestration. | 01/06/2026 | 01/06/2026 | |
-| 2 (Tue) | Set up AWS CodeCommit repository for Cloud Nexus source code; configure IAM roles for the pipeline. | 02/06/2026 | 02/06/2026 | |
-| 3 (Wed) | Build CI pipeline with AWS CodeBuild: automate Docker image builds, run unit tests for FastAPI backend. | 03/06/2026 | 03/06/2026 | |
-| 4 (Thu) | Set up CD pipeline with AWS CodeDeploy: deploy Docker containers to EC2; configure AppSpec and scripts. | 04/06/2026 | 04/06/2026 | |
-| 5 (Fri) | Use Terraform to define the entire CI/CD infrastructure (VPC, ECR repositories, CodePipeline, CodeBuild projects, CodeDeploy groups). | 05/06/2026 | 05/06/2026 | |
+| 1 (Mon) | Write Dockerfiles for frontend (React + Vite) and backend (FastAPI + Uvicorn); create docker-compose.yml for multi-container orchestration. | 08/06/2026 | 08/06/2026 | |
+| 2 (Tue) | Set up AWS CodeCommit repository for Cloud Nexus source code; configure IAM roles for the pipeline. | 09/06/2026 | 09/06/2026 | |
+| 3 (Wed) | Build CI pipeline with AWS CodeBuild: automate Docker image builds, run unit tests for FastAPI backend. | 10/06/2026 | 10/06/2026 | |
+| 4 (Thu) | Set up CD pipeline with AWS CodeDeploy: deploy Docker containers to EC2; configure AppSpec and scripts. | 11/06/2026 | 11/06/2026 | |
+| 5 (Fri) | Use Terraform to define the entire CI/CD infrastructure (VPC, ECR repositories, CodePipeline, CodeBuild projects, CodeDeploy groups). | 12/06/2026 | 12/06/2026 | |
 
 ---
 

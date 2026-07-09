@@ -23,11 +23,11 @@ pre: " <b> 1.10 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | Phát triển React Flow canvas: tạo CustomNode (10 loại node với icon + màu) và CustomEdge (smoothstep + animated); implement smartHandles và edgeRouting. | 15/06/2026 | 15/06/2026 | |
-| 2 (Thứ Ba) | Xây dựng UI components: GlassPanel (hiệu ứng kính mờ), TopHUD (thanh trạng thái trên cùng), FloatingCommandBar (thanh lệnh terminal), HackerOverlay, ResultModal. | 16/06/2026 | 16/06/2026 | |
-| 3 (Thứ Tư) | Phát triển useAI hook: kết nối frontend với backend API (generate, scan, simulate); xử lý async/await, error handling, logging ra terminal; implement useStore (Zustand) cho state management. | 17/06/2026 | 17/06/2026 | |
-| 4 (Thứ Năm) | Triển khai Cloud Nexus lên AWS: cấu hình ECS Fargate cluster cho containers frontend & backend; thiết lập Application Load Balancer và Auto Scaling. | 18/06/2026 | 18/06/2026 | |
-| 5 (Thứ Sáu) | Tìm hiểu Kubernetes: cài đặt Minikube, viết deployment.yaml cho Cloud Nexus, deploy ứng dụng; thiết lập Velero backup cho cluster resources. | 19/06/2026 | 19/06/2026 | |
+| 1 (Thứ Hai) | Phát triển React Flow canvas: tạo CustomNode (10 loại node với icon + màu) và CustomEdge (smoothstep + animated); implement smartHandles và edgeRouting. | 22/06/2026 | 22/06/2026 | |
+| 2 (Thứ Ba) | Xây dựng UI components: GlassPanel (hiệu ứng kính mờ), TopHUD (thanh trạng thái trên cùng), FloatingCommandBar (thanh lệnh terminal), HackerOverlay, ResultModal. | 23/06/2026 | 23/06/2026 | |
+| 3 (Thứ Tư) | Phát triển useAI hook: kết nối frontend với backend API (generate, scan, simulate); xử lý async/await, error handling, logging ra terminal; implement useStore (Zustand) cho state management. | 24/06/2026 | 24/06/2026 | |
+| 4 (Thứ Năm) | Triển khai Cloud Nexus lên AWS: cấu hình ECS Fargate cluster cho containers frontend & backend; thiết lập Application Load Balancer và Auto Scaling. | 25/06/2026 | 25/06/2026 | |
+| 5 (Thứ Sáu) | Tìm hiểu Kubernetes: cài đặt Minikube, viết deployment.yaml cho Cloud Nexus, deploy ứng dụng; thiết lập Velero backup cho cluster resources. | 26/06/2026 | 26/06/2026 | |
 
 ---
 

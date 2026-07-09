@@ -21,11 +21,11 @@ pre: " <b> 1.4 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Thiết lập Sandbox & Giám sát: Tạo môi trường kiểm thử IAM an toàn và cấu hình AWS CloudTrail để ghi log toàn bộ Management events. | 29/09/2025 | 29/09/2025 | |
-| 2 (Thứ Ba) | **Thiết lập luồng cảnh báo: Cấu hình kênh thông báo Amazon SNS và xử lý kiến trúc đồng bộ Region về us-east-1.| 30/09/2025 | 30/09/2025 | |
-| 3 (Thứ Tư) | **Xây dựng bộ lọc sự kiện: Phân tích log và viết mã JSON Event Pattern trên Amazon EventBridge để bắt hành vi leo thang đặc quyền. | 01/10/2025 | 01/10/2025 | |
-| 4 (Thứ Năm) | **Phát triển mã nguồn tự động hóa: Viết script Python cho AWS Lambda để bóc tách JSON, tước quyền tự động và gửi cảnh báo. | 02/10/2025 | 02/10/2025 | |
-| 5 (Thứ Sáu) | **Tích hợp & Kiểm thử: Nối EventBridge với Lambda, tiến hành Live Test gán quyền Admin trái phép, gỡ lỗi qua CloudWatch. | 03/10/2025 | 03/10/2025 | |
+| 1 (Thứ Hai) | **Thiết lập Sandbox & Giám sát: Tạo môi trường kiểm thử IAM an toàn và cấu hình AWS CloudTrail để ghi log toàn bộ Management events. | 11/05/2026 | 11/05/2026 | |
+| 2 (Thứ Ba) | **Thiết lập luồng cảnh báo: Cấu hình kênh thông báo Amazon SNS và xử lý kiến trúc đồng bộ Region về us-east-1.| 12/05/2026 | 12/05/2026 | |
+| 3 (Thứ Tư) | **Xây dựng bộ lọc sự kiện: Phân tích log và viết mã JSON Event Pattern trên Amazon EventBridge để bắt hành vi leo thang đặc quyền. | 13/05/2026 | 13/05/2026 | |
+| 4 (Thứ Năm) | **Phát triển mã nguồn tự động hóa: Viết script Python cho AWS Lambda để bóc tách JSON, tước quyền tự động và gửi cảnh báo. | 14/05/2026 | 14/05/2026 | |
+| 5 (Thứ Sáu) | **Tích hợp & Kiểm thử: Nối EventBridge với Lambda, tiến hành Live Test gán quyền Admin trái phép, gỡ lỗi qua CloudWatch. | 15/05/2026 | 15/05/2026 | |
 
 ---
 

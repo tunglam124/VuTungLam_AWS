@@ -21,11 +21,11 @@ pre: " <b> 1.5 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **S3 Integration (Part 1)**: Create an S3 Bucket and configure its Bucket Policy for public read access. | 11/05/2026 | 11/05/2026 | |
-| 2 (Tue) | **Deploy AWS WAF**: Create a Web ACL, add basic security rules (e.g., block suspicious IPs), and associate it with the ALB. | 12/05/2026 | 12/05/2026 | |
-| 3 (Wed) | **Review & Document**: Check Security Groups (least privilege), review EC2 Right-sizing, and write architecture documentation. | 13/05/2026 | 13/05/2026 | |
-| 4 (Thu) | **S3 Integration (Part 2)**: Update the application's HTML/CSS source code to use image links from the S3 Bucket. | 14/05/2026 | 14/05/2026 | |
-| 5 (Fri) | **Learn IaC**: Read an overview of Infrastructure as Code and watch an introductory video on AWS CloudFormation basics (Stacks, Templates). | 15/05/2026 | 15/05/2026 | |
+| 1 (Mon) | **S3 Integration (Part 1)**: Create an S3 Bucket and configure its Bucket Policy for public read access. | 18/05/2026 | 18/05/2026 | |
+| 2 (Tue) | **Deploy AWS WAF**: Create a Web ACL, add basic security rules (e.g., block suspicious IPs), and associate it with the ALB. | 19/05/2026 | 19/05/2026 | |
+| 3 (Wed) | **Review & Document**: Check Security Groups (least privilege), review EC2 Right-sizing, and write architecture documentation. | 20/05/2026 | 20/05/2026 | |
+| 4 (Thu) | **S3 Integration (Part 2)**: Update the application's HTML/CSS source code to use image links from the S3 Bucket. | 21/05/2026 | 21/05/2026 | |
+| 5 (Fri) | **Learn IaC**: Read an overview of Infrastructure as Code and watch an introductory video on AWS CloudFormation basics (Stacks, Templates). | 22/05/2026 | 22/05/2026 | |
 
 ### **References / Materials**
 

@@ -22,11 +22,11 @@ pre: " <b> 1.7 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Initialize Cloud Nexus project: install Vite + React 18 + Tailwind CSS + React Flow; create frontend directory structure. | 25/05/2026 | 25/05/2026 | https://github.com/thawngs18/DEMO.git |
-| 2 (Tue) | Set up FastAPI backend: create main.py with endpoints /api/ai/generate, /api/topology/validate, /api/simulation/scan, /api/simulation/run. | 26/05/2026 | 26/05/2026 | |
-| 3 (Wed) | Integrate Google Gemini AI: write ai_service.py with system prompts (GENERATION_PROMPT, VALIDATION_PROMPT, SIMULATION_PROMPT, SCAN_PROMPT); configure Gemini client. | 27/05/2026 | 27/05/2026 | |
-| 4 (Thu) | Define node definitions: create 10 node types (Server, Database, Firewall, IPS, IDS, Router, Cloud, IoT, Workstation, Attacker) with Lucide React icons and corresponding colors. | 28/05/2026 | 28/05/2026 | |
-| 5 (Fri) | Learn AWS Lambda + API Gateway for Serverless backend; write CloudFormation template to deploy Cloud Nexus infrastructure. | 29/05/2026 | 29/05/2026 | |
+| 1 (Mon) | Initialize Cloud Nexus project: install Vite + React 18 + Tailwind CSS + React Flow; create frontend directory structure. | 01/06/2026 | 01/06/2026 | https://github.com/thawngs18/DEMO.git |
+| 2 (Tue) | Set up FastAPI backend: create main.py with endpoints /api/ai/generate, /api/topology/validate, /api/simulation/scan, /api/simulation/run. | 02/06/2026 | 02/06/2026 | |
+| 3 (Wed) | Integrate Google Gemini AI: write ai_service.py with system prompts (GENERATION_PROMPT, VALIDATION_PROMPT, SIMULATION_PROMPT, SCAN_PROMPT); configure Gemini client. | 03/06/2026 | 03/06/2026 | |
+| 4 (Thu) | Define node definitions: create 10 node types (Server, Database, Firewall, IPS, IDS, Router, Cloud, IoT, Workstation, Attacker) with Lucide React icons and corresponding colors. | 04/06/2026 | 04/06/2026 | |
+| 5 (Fri) | Learn AWS Lambda + API Gateway for Serverless backend; write CloudFormation template to deploy Cloud Nexus infrastructure. | 05/06/2026 | 05/06/2026 | |
 
 ---
 

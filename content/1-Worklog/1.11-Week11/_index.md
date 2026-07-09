@@ -23,11 +23,11 @@ pre: " <b> 1.11 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Set up CDK project with TypeScript: initialize cdk app, configure TypeScript config, define CloudNexusStack; research Python 3.12 ARM64 Lambda compatibility. | 22/06/2026 | 22/06/2026 | |
-| 2 (Tue) | Build **Simulation Stack**: create SQS queue (buffered scan requests), DynamoDB table (topology + results), S3 bucket (artifacts), Step Functions state machine (orchestrator), SNS topic (alerts). | 23/06/2026 | 23/06/2026 | |
-| 3 (Wed) | Build **Auth Stack** with Cognito User Pool; build **Secrets Stack**: create Secrets Manager secret for GOOGLE_API_KEY; research Lambda Layer structure for Python dependencies. | 24/06/2026 | 24/06/2026 | |
-| 4 (Thu) | Create **Lambda Layer** for Python 3.12 ARM64: package fastapi, mangum, google-genai, pydantic into proper layer structure; develop Lambda function with FastAPI app + Mangum handler. | 25/06/2026 | 25/06/2026 | |
-| 5 (Fri) | Assemble **API Stack**: configure API Gateway HTTP API, IAM roles, Cognito authorizer; integrate all outputs (bucket names, queue URLs, table ARNs) via CDK context; run `cdk synth` and `cdk deploy` for the first time. | 26/06/2026 | 26/06/2026 | |
+| 1 (Mon) | Set up CDK project with TypeScript: initialize cdk app, configure TypeScript config, define CloudNexusStack; research Python 3.12 ARM64 Lambda compatibility. | 29/06/2026 | 29/06/2026 | |
+| 2 (Tue) | Build **Simulation Stack**: create SQS queue (buffered scan requests), DynamoDB table (topology + results), S3 bucket (artifacts), Step Functions state machine (orchestrator), SNS topic (alerts). | 30/06/2026 | 30/06/2026 | |
+| 3 (Wed) | Build **Auth Stack** with Cognito User Pool; build **Secrets Stack**: create Secrets Manager secret for GOOGLE_API_KEY; research Lambda Layer structure for Python dependencies. | 01/07/2026 | 01/07/2026 | |
+| 4 (Thu) | Create **Lambda Layer** for Python 3.12 ARM64: package fastapi, mangum, google-genai, pydantic into proper layer structure; develop Lambda function with FastAPI app + Mangum handler. | 02/07/2026 | 02/07/2026 | |
+| 5 (Fri) | Assemble **API Stack**: configure API Gateway HTTP API, IAM roles, Cognito authorizer; integrate all outputs (bucket names, queue URLs, table ARNs) via CDK context; run `cdk synth` and `cdk deploy` for the first time. | 03/07/2026 | 03/07/2026 | |
 
 ---
 

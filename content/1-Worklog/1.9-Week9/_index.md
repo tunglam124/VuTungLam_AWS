@@ -22,11 +22,11 @@ pre: " <b> 1.9 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Develop AI Simulation Engine: write SIMULATION_PROMPT with detailed attack path tracing, Zero Trust logic, realistic attack technique descriptions (nmap, CVE exploit, brute-force). | 08/06/2026 | 08/06/2026 | |
-| 2 (Tue) | Build /api/simulation/run and /api/simulation/run-with-defense endpoints; implement SimulationRequest/SimulationResponse models; develop normalize_node for flat/nested JSON from AI. | 09/06/2026 | 09/06/2026 | |
-| 3 (Wed) | Develop SCAN_PROMPT and VALIDATION_PROMPT: attack surface analysis, Zero Trust vulnerability checking, attack scenario generation (SQL Injection, Lateral Movement, DDoS IoT Botnet). | 10/06/2026 | 10/06/2026 | |
-| 4 (Thu) | Debug and optimize AI service: handle JSON parse errors, implement retry logic for truncated responses, type_mapping for network devices (internet→cloud, pc→workstation, db→database). | 11/06/2026 | 11/06/2026 | |
-| 5 (Fri) | Set up Prometheus + Grafana for monitoring: configure metrics endpoint for FastAPI, create dashboards for CPU, memory, request latency; research cAdvisor for container metrics. | 12/06/2026 | 12/06/2026 | |
+| 1 (Mon) | Develop AI Simulation Engine: write SIMULATION_PROMPT with detailed attack path tracing, Zero Trust logic, realistic attack technique descriptions (nmap, CVE exploit, brute-force). | 15/06/2026 | 15/06/2026 | |
+| 2 (Tue) | Build /api/simulation/run and /api/simulation/run-with-defense endpoints; implement SimulationRequest/SimulationResponse models; develop normalize_node for flat/nested JSON from AI. | 16/06/2026 | 16/06/2026 | |
+| 3 (Wed) | Develop SCAN_PROMPT and VALIDATION_PROMPT: attack surface analysis, Zero Trust vulnerability checking, attack scenario generation (SQL Injection, Lateral Movement, DDoS IoT Botnet). | 17/06/2026 | 17/06/2026 | |
+| 4 (Thu) | Debug and optimize AI service: handle JSON parse errors, implement retry logic for truncated responses, type_mapping for network devices (internet→cloud, pc→workstation, db→database). | 18/06/2026 | 18/06/2026 | |
+| 5 (Fri) | Set up Prometheus + Grafana for monitoring: configure metrics endpoint for FastAPI, create dashboards for CPU, memory, request latency; research cAdvisor for container metrics. | 19/06/2026 | 19/06/2026 | |
 
 ---
 

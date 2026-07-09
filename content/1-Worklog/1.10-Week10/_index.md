@@ -23,11 +23,11 @@ pre: " <b> 1.10 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | Develop React Flow canvas: create CustomNode (10 node types with icon + color) and CustomEdge (smoothstep + animated); implement smartHandles and edgeRouting utilities. | 15/06/2026 | 15/06/2026 | |
-| 2 (Tue) | Build UI components: GlassPanel (frosted glass effect), TopHUD (top status bar), FloatingCommandBar (terminal-style command bar), HackerOverlay, ResultModal. | 16/06/2026 | 16/06/2026 | |
-| 3 (Wed) | Develop useAI hook: connect frontend to backend API (generate, scan, simulate); handle async/await, error handling, real-time logging to terminal; implement useStore (Zustand) for global state management. | 17/06/2026 | 17/06/2026 | |
-| 4 (Thu) | Deploy Cloud Nexus to AWS: configure ECS Fargate cluster for frontend & backend containers; set up Application Load Balancer and Auto Scaling. | 18/06/2026 | 18/06/2026 | |
-| 5 (Fri) | Learn Kubernetes: install Minikube, write deployment.yaml for Cloud Nexus, deploy the application; set up Velero backup for cluster resources. | 19/06/2026 | 19/06/2026 | |
+| 1 (Mon) | Develop React Flow canvas: create CustomNode (10 node types with icon + color) and CustomEdge (smoothstep + animated); implement smartHandles and edgeRouting utilities. | 22/06/2026 | 22/06/2026 | |
+| 2 (Tue) | Build UI components: GlassPanel (frosted glass effect), TopHUD (top status bar), FloatingCommandBar (terminal-style command bar), HackerOverlay, ResultModal. | 23/06/2026 | 23/06/2026 | |
+| 3 (Wed) | Develop useAI hook: connect frontend to backend API (generate, scan, simulate); handle async/await, error handling, real-time logging to terminal; implement useStore (Zustand) for global state management. | 24/06/2026 | 24/06/2026 | |
+| 4 (Thu) | Deploy Cloud Nexus to AWS: configure ECS Fargate cluster for frontend & backend containers; set up Application Load Balancer and Auto Scaling. | 25/06/2026 | 25/06/2026 | |
+| 5 (Fri) | Learn Kubernetes: install Minikube, write deployment.yaml for Cloud Nexus, deploy the application; set up Velero backup for cluster resources. | 26/06/2026 | 26/06/2026 | |
 
 ---
 
