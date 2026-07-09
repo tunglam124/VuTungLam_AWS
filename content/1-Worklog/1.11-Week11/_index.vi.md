@@ -1,6 +1,6 @@
 ---
 title: "WEEK 11 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-22"
 weight: 11
 chapter: false
 pre: " <b> 1.11 </b> "
@@ -8,38 +8,45 @@ pre: " <b> 1.11 </b> "
 
 # **WEEK 11 WORKLOG**
 
-### **Week 11 Objectives**
+### **Mục tiêu Tuần 11**
 
-* Tìm hiểu và thực hành các tính năng nâng cao của **Kubernetes** (K8s) bao gồm quản lý tài nguyên, auto-scaling, và bảo mật.
-* Cấu hình thành công **Horizontal Pod Autoscaler (HPA)** để tự động co giãn Pod.
-* Cấu hình thành công các chính sách bảo mật K8s như **Network Policies** và **RBAC**.
-* Nghiên cứu về các hệ thống giám sát (Monitoring) và quản lý log (Logging) cho K8s (Prometheus, Grafana, ELK, Fluentd).
-* Tìm hiểu và cấu hình tính năng nâng cao của **AWS Application Load Balancer (ALB)**, cụ thể là **Content-based Routing**.
-* Nghiên cứu về hỗ trợ **HTTP/2** trên ALB.
+* Xây dựng **hạ tầng serverless** cho Cloud Nexus sử dụng **AWS CDK (TypeScript)**.
+* Phát triển **CDK stacks**: Simulation Stack (SQS, DynamoDB, S3, Step Functions, SNS) và Auth Stack (Cognito).
+* Tạo **Lambda functions** bằng Python 3.12 ARM64 với FastAPI qua Mangum adapter.
+* Cấu hình **API Gateway HTTP API** và IAM roles cho Lambda execution.
+* Thiết lập **Secrets Manager** để lưu trữ Google API key an toàn.
+* Xây dựng **CI/CD pipeline** với các lệnh CDK synth, deploy và destroy.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Công việc thực hiện trong tuần**
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **K8s Quản lý Tài nguyên & Scaling**: Học về Resource Quotas, Limit Ranges. Thực hành cấu hình **Horizontal Pod Autoscaler (HPA)**. | 17/11/2025 | 17/11/2025 | |
-| 2 (Thứ Ba) | **K8s Security (Network)**: Thực hành cấu hình **Network Policies** để kiểm soát lưu lượng mạng giữa các Pod. Nghiên cứu các tool giám sát (Prometheus, Grafana, ELK). | 18/11/2025 | 18/11/2025 | |
-| 3 (Thứ Tư) | **K8s Security (Access)**: Thực hành cấu hình **RBAC** (Roles, RoleBindings) để quản lý quyền truy cập. Nghiên cứu các tool quản lý log (Fluentd, ELK). | 19/11/2025 | 19/11/2025 | |
-| 4 (Thứ Năm) | **Tìm hiểu ALB Content-based Routing**: Nghiên cứu và viết tài liệu chi tiết về cách ALB định tuyến lưu lượng dựa trên nội dung (path, header). | 20/11/2025 | 20/11/2025 | |
-| 5 (Thứ Sáu) | **Cấu hình ALB & HTTP/2**: Thực hành cấu hình **Content-based Routing** (vd: `/api/*`). Gỡ lỗi. Nghiên cứu về hỗ trợ **HTTP/2** trên ALB. | 21/11/2025 | 21/11/2025 | |
+| 1 (Thứ Hai) | Thiết lập CDK project với TypeScript: khởi tạo cdk app, cấu hình TypeScript config, định nghĩa CloudNexusStack; tìm hiểu Python 3.12 ARM64 Lambda compatibility. | 22/06/2026 | 22/06/2026 | |
+| 2 (Thứ Ba) | Xây dựng **Simulation Stack**: tạo SQS queue (đệm scan requests), DynamoDB table (lưu topology + kết quả), S3 bucket (artifacts), Step Functions state machine (điều phối), SNS topic (cảnh báo). | 23/06/2026 | 23/06/2026 | |
+| 3 (Thứ Tư) | Xây dựng **Auth Stack** với Cognito User Pool; xây dựng **Secrets Stack**: tạo Secrets Manager secret cho GOOGLE_API_KEY; tìm hiểu Lambda Layer structure cho Python dependencies. | 24/06/2026 | 24/06/2026 | |
+| 4 (Thứ Năm) | Tạo **Lambda Layer** cho Python 3.12 ARM64: đóng gói fastapi, mangum, google-genai, pydantic vào cấu trúc layer chuẩn; phát triển Lambda function với FastAPI app + Mangum handler. | 25/06/2026 | 25/06/2026 | |
+| 5 (Thứ Sáu) | Lắp ráp **API Stack**: cấu hình API Gateway HTTP API, IAM roles, Cognito authorizer; tích hợp tất cả output (bucket names, queue URLs, table ARNs) qua CDK context; chạy `cdk synth` và `cdk deploy` lần đầu. | 26/06/2026 | 26/06/2026 | |
 
 ---
 
-### **Week 11 Achievements**
+### **Kết quả đạt được Tuần 11**
 
-* Nắm vững các khái niệm quản lý tài nguyên trong Kubernetes như **Resource Quotas** và **Limit Ranges**.
-* Cấu hình và triển khai thành công **Horizontal Pod Autoscaler (HPA)** bằng file YAML, cho phép hệ thống tự động co giãn (scale) số lượng Pod dựa trên tải CPU.
-* Nắm vững và thực hành thành công các tính năng bảo mật quan trọng trong Kubernetes:
-    * **Network Policies**: Viết và áp dụng file YAML để kiểm soát lưu lượng mạng (ingress) giữa các Pod.
-    * **RBAC (Role-Based Access Control)**: Viết và áp dụng file YAML để tạo **Roles** và **RoleBindings**, quản lý quyền truy cập của người dùng (ví dụ: `pod-reader`).
-* Nghiên cứu tổng quan về các hệ thống giám sát (**Prometheus**, **Grafana**) và quản lý log (**ELK Stack**, **Fluentd**) phổ biến trong hệ sinh thái K8s.
-* Nắm vững và viết tài liệu chi tiết về tính năng **Content-based Routing** của AWS Application Load Balancer (ALB).
-* Cấu hình thành công các quy tắc (rules) trên ALB Listener để định tuyến lưu lượng truy cập đến các Target Group khác nhau dựa trên đường dẫn URL (ví dụ: `/api/*`).
-* Khắc phục được các sự cố cấu hình khi HPA không hoạt động hoặc Network Policy không được áp dụng đúng.
-* Tìm hiểu về lợi ích và cách kích hoạt hỗ trợ **HTTP/2** trên ALB (thông qua listener HTTPS).
+* Khởi tạo thành công **AWS CDK (TypeScript)** project với `cdk init app --language typescript`, cấu hình `tsconfig.json` và `cdk.json` cho dự án Cloud Nexus.
+* Xây dựng **Simulation Stack** (`CloudNexusSimulationStack`) bao gồm:
+  * **SQS** standard queue làm bộ đệm cho simulation requests.
+  * **DynamoDB** table với partition key `PK` (lưu topology/kết quả).
+  * **S3** bucket chứa topology JSON artifacts.
+  * **Step Functions** state machine điều phối simulation đa bước.
+  * **SNS** topic cho thông báo cảnh báo bảo mật.
+* Xây dựng **Secrets Stack** dùng `aws-cdk-lib/aws-secretsmanager` tạo secret `GOOGLE_API_KEY` với auto-rotation.
+* Xây dựng **Cognito Auth Stack**: User Pool với đăng nhập email/password, App Client cho frontend.
+* Phát triển **Python 3.12 ARM64 Lambda Layer**: tạo cấu trúc `/python/lib/python3.12/site-packages/` chứa `fastapi==0.115.0`, `mangum==0.17.0`, `google-genai==1.0.0`, `pydantic==2.9.0`. Cấu hình Lambda với `architecture: Architecture.ARM_64` và `runtime: Runtime.PYTHON_3_12`.
+* Implement **FastAPI application** với Mangum handler: định nghĩa routes (`/api/health`, `/api/ai/generate`, `/api/topology/validate`, `/api/simulation/scan`, `/api/simulation/run`, `/api/simulation/run-with-defense`), tích hợp CORS middleware.
+* Xây dựng **API Stack** (`CloudNexusApiStack`) với:
+  * **API Gateway HTTP API** tích hợp Lambda.
+  * **Cognito User Pool Authorizer** cho các endpoint bảo vệ.
+  * **IAM roles** cấp quyền Lambda đọc Secrets Manager và toàn quyền truy cập SQS, DynamoDB, SNS, Step Functions.
+* Chạy thành công `cdk synth` (sinh CloudFormation template) và `cdk deploy --all` để triển khai tất cả stacks lên AWS.
+* Xác minh tất cả stack outputs (API Gateway URL, S3 bucket name, SQS queue URL, DynamoDB table name, Cognito User Pool ID) để cấu hình frontend.

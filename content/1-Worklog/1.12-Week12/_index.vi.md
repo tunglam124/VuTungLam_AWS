@@ -1,6 +1,6 @@
 ---
-title: "WEEK 12 WORKLOG"
-date: "2025-11-10"
+title: "Worklog Tuần 12"
+date: "2026-06-13"
 weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
@@ -8,32 +8,33 @@ pre: " <b> 1.12 </b> "
 
 # **WEEK 12 WORKLOG**
 
-### **Week 12 Objectives**
+### **Mục tiêu tuần 12**
 
-* Hoàn thiện và tối ưu hóa cấu hình **AWS Application Load Balancer (ALB)**.
-* Tìm hiểu và cấu hình thành công các tính năng nâng cao của ALB bao gồm **HTTP/2**, **WebSocket**, và **Sticky Sessions**.
-* Thực hiện kiểm tra hiệu suất (Performance Testing) cho ALB để đánh giá khả năng chịu tải.
-* Hoàn thành workshop và chuẩn bị báo cáo tổng kết kỳ thực tập.
+* Triển khai **frontend** lên AWS qua S3 static hosting và CloudFront CDN.
+* Hoàn thiện **tích hợp frontend-backend** và đảm bảo CORS hoạt động end-to-end.
+* Tích hợp các **dịch vụ AI** và kiểm tra toàn bộ luồng chức năng của ứng dụng.
 
 ---
 
-### **Tasks to be carried out this week**
+### **Các công việc cần triển khai trong tuần này**
 
-| Day | Task | Start Date | Completion Date | Reference/Material |
+| Day | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Thứ Hai) | **Tìm hiểu & Cấu hình HTTP/2**: Nghiên cứu và cấu hình ALB Listener (HTTPS) để hỗ trợ **HTTP/2**. Nghiên cứu sơ bộ về **WebSocket**. | 24/11/2025 | 24/11/2025 | |
-| 2 (Thứ Ba) | **Cấu hình WebSocket**: Cấu hình ALB Listener để hỗ trợ **WebSocket** và kiểm tra kết nối. Tối ưu hóa cài đặt timeout. | 25/11/2025 | 25/11/2025 | |
-| 3 (Thứ Tư) | **Cấu hình Sticky Sessions (Phần 1)**: Cấu hình **Sticky Sessions** (Target Group Attributes) để duy trì phiên làm việc. Thực hiện **Health Checks**. | 26/11/2025 | 26/11/2025 | |
-| 4 (Thứ Năm) | **Cấu hình Sticky Sessions (Phần 2)**: (Nội dung lặp lại) Kiểm tra và xác nhận tính năng Sticky Sessions hoạt động. | 27/11/2025 | 27/11/2025 | |
-| 5 (Thứ Sáu) | **Kiểm thử Hiệu suất (Performance Testing)**: Sử dụng công cụ (JMeter/Gatling) để kiểm thử tải ALB. Phân tích kết quả và hoàn thành báo cáo. | 28/11/2025 | 28/11/2025 | |
+| 1 (Thứ Ba) | - Xây dựng stack `CloudNexus-Secrets` và tạo Secrets Manager lưu GOOGLE_API_KEY<br>- Xây dựng stack `CloudNexus-Backend` với Lambda dùng FastAPI qua Mangum, API Gateway HTTP API và IAM roles<br>- Cấu hình Lambda Layer chứa Python dependencies: fastapi, mangum, google-genai<br>- Deploy lần đầu cả hai stack lên AWS<br>- Khởi tạo cấu trúc frontend với Vite + React + ReactFlow + Zustand + TailwindCSS<br>- Cấu hình build script triển khai frontend lên S3 bucket<br>- Deploy S3 bucket và thiết lập CloudFront distribution phục vụ frontend | 06/06/2026 | 06/06/2026 | |
+| 2 (Thứ Tư) | - Fix lỗi CORS preflight OPTIONS từ CloudFront qua API Gateway bị trả 400 Bad Request<br>- Loại bỏ CORS config khỏi API Gateway để tránh double-handling với FastAPI CORSMiddleware<br>- Bổ sung handler `@app.options` trong FastAPI xử lý preflight<br>- Cập nhật `allow_origins` trong CORSMiddleware bao gồm CloudFront URL và localhost<br>- Thêm Lambda Layer mới chứa đầy đủ dependencies<br>- Rebuild và redeploy Lambda function | 07/06/2026 | 07/06/2026 | |
+| 3 (Thứ Năm) | - Cấu hình `VITE_API_URL` trong `.env.production` trỏ đến API Gateway endpoint production<br>- Thiết lập build configuration cho Vite ở production mode<br>- Deploy lại frontend bundle đã build lên S3 và thực hiện invalidation cache CloudFront<br>- Kiểm tra kết nối frontend từ CloudFront tới backend API | 08/06/2026 | 08/06/2026 | |
+| 4 (Thứ Sáu) | - Hoàn thiện FastAPI backend bằng endpoint `GET /` trả metadata API<br>- Verify tất cả endpoint: `/api/health`, `/api/ai/generate`, `/api/topology/validate`, `/api/simulation/scan`<br>- Kiểm tra CORS headers trên tất cả endpoint từ CloudFront origin<br>- Test đầu cuối luồng AI generate topology từ frontend | 09/06/2026 | 09/06/2026 | |
+| 5 (Thứ Bảy) | - Tích hợp và kiểm tra toàn bộ luồng: AI generate topology, topology validation, simulation scan, simulation run, simulation with defense<br>- Test thực tế từ giao diện frontend trên CloudFront để đảm bảo tất cả chức năng ổn định<br>- Fix endpoint `/api/simulation/with-defense` trả đầy đủ `attack_steps` và `defense_mechanisms`<br>- Tối ưu tên Lambda function và CloudFormation outputs | 10/06/2026 | 10/06/2026 | |
 
 ---
 
-### **Week 12 Achievements**
+### **Kết quả đạt được tuần 12**
 
-* Cấu hình thành công **Application Load Balancer (ALB)** để hỗ trợ giao thức **HTTP/2** (qua listener HTTPS), hiểu rõ lợi ích về hiệu suất của nó.
-* Cấu hình thành công ALB để hỗ trợ kết nối **WebSocket**, cho phép giao tiếp hai chiều (real-time) và khắc phục được sự cố về `idle timeout`.
-* Cấu hình và kiểm tra thành công tính năng **Sticky Sessions** (Application-based cookie) trên Target Group, đảm bảo các yêu cầu từ một client được chuyển hướng đến cùng một instance.
-* Thực hiện thành công các bài kiểm tra **Health Checks** để đảm bảo các instance trong Target Group ở trạng thái khỏe mạnh.
-* Thực hiện **Kiểm thử hiệu suất (Performance Testing)** cho ALB bằng cách sử dụng các công cụ tạo tải (như JMeter), phân tích các chỉ số (thời gian phản hồi, tỷ lệ lỗi) và xác định các điểm cần tối ưu.
-* Hoàn thành workshop cuối cùng và chuẩn bị báo cáo tổng kết cho toàn bộ 12 tuần thực tập.
+* **Backend** đã triển khai hoàn chỉnh trên AWS Lambda với FastAPI, chạy thông qua Mangum adapter.
+* **API Gateway HTTP API** đã hoạt động, expose đầy đủ endpoint để frontend truy cập qua CloudFront.
+* **Secrets Manager** lưu trữ `GOOGLE_API_KEY` an toàn, Lambda đọc thông qua IAM grant read.
+* **Frontend** đã deploy lên S3 và phục vụ qua **CloudFront CDN**.
+* **CORS** đã được xử lý đúng qua FastAPI **CORSMiddleware**, cho phép request từ CloudFront origin.
+* **Lambda Layer** chứa `fastapi`, `mangum`, `google-genai` đảm bảo Lambda có đầy đủ dependencies.
+* Toàn bộ luồng **end-to-end** từ frontend đến backend hoạt động ổn định: AI generate topology, topology validation, simulation scan, simulation run, simulation with defense.
+* **Infrastructure** được quản lý hoàn toàn qua **AWS CDK** và có thể redeploy bất kỳ lúc nào.

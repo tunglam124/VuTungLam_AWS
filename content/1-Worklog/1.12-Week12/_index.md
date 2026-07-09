@@ -1,6 +1,6 @@
 ---
 title: "WEEK 12 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-13"
 weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
@@ -10,10 +10,9 @@ pre: " <b> 1.12 </b> "
 
 ### **Week 12 Objectives**
 
-* Finalize and optimize the **AWS Application Load Balancer (ALB)** configuration.
-* Learn and successfully configure advanced ALB features: **HTTP/2**, **WebSocket**, and **Sticky Sessions**.
-* Conduct **Performance Testing** on the ALB to evaluate its load-handling capabilities.
-* Complete the final workshop and prepare the final internship report.
+* Deploy **frontend** to AWS via S3 static hosting and CloudFront CDN.
+* Complete **frontend-backend integration** and ensure CORS works end-to-end.
+* Integrate **AI services** and test the full application workflow.
 
 ---
 
@@ -21,19 +20,21 @@ pre: " <b> 1.12 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **Configure HTTP/2**: Set up the ALB Listener (HTTPS) to support **HTTP/2**. Conduct initial research on **WebSocket**. | 24/11/2025 | 24/11/2025 | |
-| 2 (Tue) | **Configure WebSocket**: Configure the ALB Listener to support **WebSocket** and test the connection. Optimize timeout settings. | 25/11/2025 | 25/11/2025 | |
-| 3 (Wed) | **Configure Sticky Sessions (Part 1)**: Configure **Sticky Sessions** (Target Group Attributes) to maintain user sessions. Run **Health Checks**. | 26/11/2025 | 26/11/2025 | |
-| 4 (Thu) | **Configure Sticky Sessions (Part 2)**: (Repeated) Verify and confirm that the Sticky Sessions feature is working correctly. | 27/11/2025 | 27/11/2025 | |
-| 5 (Fri) | **Performance Testing**: Use a tool (JMeter/Gatling) to load test the ALB. Analyze the results and prepare the final report. | 28/11/2025 | 28/11/2025 | |
+| 1 (Tue) | - Build `CloudNexus-Secrets` stack and create Secrets Manager to store GOOGLE_API_KEY<br>- Build `CloudNexus-Backend` stack with Lambda (FastAPI via Mangum), API Gateway HTTP API and IAM roles<br>- Configure Lambda Layer with Python dependencies: fastapi, mangum, google-genai<br>- First deploy of both stacks to AWS<br>- Initialize frontend structure with Vite + React + ReactFlow + Zustand + TailwindCSS<br>- Configure build script to deploy frontend to S3 bucket<br>- Deploy S3 bucket and set up CloudFront distribution for frontend | 06/06/2026 | 06/06/2026 | |
+| 2 (Wed) | - Fix CORS preflight OPTIONS error from CloudFront to API Gateway returning 400 Bad Request<br>- Remove CORS config from API Gateway to avoid double-handling with FastAPI CORSMiddleware<br>- Add `@app.options` handler in FastAPI for preflight requests<br>- Update `allow_origins` in CORSMiddleware to include CloudFront URL and localhost<br>- Add new Lambda Layer with full dependencies<br>- Rebuild and redeploy Lambda function | 07/06/2026 | 07/06/2026 | |
+| 3 (Thu) | - Configure `VITE_API_URL` in `.env.production` pointing to production API Gateway endpoint<br>- Set up build configuration for Vite in production mode<br>- Redeploy built frontend bundle to S3 and invalidate CloudFront cache<br>- Test frontend connection from CloudFront to backend API | 08/06/2026 | 08/06/2026 | |
+| 4 (Fri) | - Complete FastAPI backend with `GET /` returning API metadata<br>- Verify all endpoints: `/api/health`, `/api/ai/generate`, `/api/topology/validate`, `/api/simulation/scan`<br>- Check CORS headers on all endpoints from CloudFront origin<br>- End-to-end test of AI generate topology flow from frontend | 09/06/2026 | 09/06/2026 | |
+| 5 (Sat) | - Integrate and test the full workflow: AI generate topology, topology validation, simulation scan, simulation run, simulation with defense<br>- Perform real-world testing from CloudFront frontend to ensure all features are stable<br>- Fix `/api/simulation/with-defense` endpoint to return full `attack_steps` and `defense_mechanisms`<br>- Optimize Lambda function names and CloudFormation outputs | 10/06/2026 | 10/06/2026 | |
 
 ---
 
 ### **Week 12 Achievements**
 
-* Successfully configured an **Application Load Balancer (ALB)** to support the **HTTP/2** protocol (via an HTTPS listener).
-* Successfully configured the ALB to support **WebSocket** connections for real-time communication and troubleshot `idle timeout` issues.
-* Configured and verified **Sticky Sessions** (Application-based cookie) on the Target Group, ensuring requests from a single client are routed to the same instance.
-* Successfully ran **Health Checks** to ensure all instances in the Target Group were healthy and ready to receive traffic.
-* Conducted **Performance Testing** against the ALB using load-generation tools (like JMeter/Gatling) to analyze key metrics (response time, error rate).
-* Completed the final workshop and prepared the final summary report for the 12-week internship.
+* **Backend** deployed completely on AWS Lambda with FastAPI, running through the Mangum adapter.
+* **API Gateway HTTP API** operational, exposing all endpoints for frontend access via CloudFront.
+* **Secrets Manager** securely stores `GOOGLE_API_KEY`; Lambda reads it via IAM grant.
+* **Frontend** deployed to S3 and served through **CloudFront CDN**.
+* **CORS** correctly handled via FastAPI `CORSMiddleware`, allowing requests from the CloudFront origin.
+* **Lambda Layer** containing `fastapi`, `mangum`, `google-genai` ensures Lambda has all dependencies.
+* Full **end-to-end flow** operational from frontend to backend: AI generate topology, topology validation, simulation scan, simulation run, simulation with defense.
+* **Infrastructure** managed entirely via **AWS CDK** and can be redeployed at any time.

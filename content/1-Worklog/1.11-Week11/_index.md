@@ -1,6 +1,6 @@
 ---
 title: "WEEK 11 WORKLOG"
-date: "2025-11-10"
+date: "2026-06-22"
 weight: 11
 chapter: false
 pre: " <b> 1.11 </b> "
@@ -10,12 +10,12 @@ pre: " <b> 1.11 </b> "
 
 ### **Week 11 Objectives**
 
-* Learn and practice advanced **Kubernetes (K8s)** features, including resource management, auto-scaling, and security.
-* Successfully configure the **Horizontal Pod Autoscaler (HPA)**.
-* Successfully configure K8s security policies like **Network Policies** and **RBAC**.
-* Research K8s monitoring and logging stacks (Prometheus, Grafana, ELK, Fluentd).
-* Learn and configure advanced **AWS Application Load Balancer (ALB)** features, specifically **Content-based Routing**.
-* Research **HTTP/2** support on the ALB.
+* Build the **serverless infrastructure** for Cloud Nexus using **AWS CDK (TypeScript)**.
+* Develop **CDK stacks**: Simulation Stack (SQS, DynamoDB, S3, Step Functions, SNS) and Auth Stack (Cognito).
+* Create **Lambda functions** in Python 3.12 ARM64 with FastAPI via Mangum adapter.
+* Configure **API Gateway HTTP API** and IAM roles for Lambda execution.
+* Set up **Secrets Manager** for secure Google API key storage.
+* Establish **CI/CD pipeline** with CDK synth, deploy, and destroy commands.
 
 ---
 
@@ -23,23 +23,30 @@ pre: " <b> 1.11 </b> "
 
 | Day | Task | Start Date | Completion Date | Reference/Material |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 (Mon) | **K8s Resource Mgmt & Scaling**: Learn Resource Quotas, Limit Ranges. Practice configuring **Horizontal Pod Autoscaler (HPA)**. | 17/11/2025 | 17/11/2025 | |
-| 2 (Tue) | **K8s Security (Network)**: Practice configuring **Network Policies** to control pod traffic. Research monitoring tools (Prometheus, ELK). | 18/11/2025 | 18/11/2025 | |
-| 3 (Wed) | **K8s Security (Access)**: Practice configuring **RBAC** (Roles, RoleBindings). Research logging tools (Fluentd, ELK). | 19/11/2025 | 19/11/2025 | |
-| 4 (Thu) | **Learn ALB Content-based Routing**: Research and write detailed documentation on how ALB routes traffic based on content (path, header). | 20/11/2025 | 20/11/2025 | |
-| 5 (Fri) | **Configure ALB & HTTP/2**: Practice configuring **Content-based Routing** (e.g., `/api/*`). Debug. Research **HTTP/2** support on ALB. | 21/11/2025 | 21/11/2025 | |
+| 1 (Mon) | Set up CDK project with TypeScript: initialize cdk app, configure TypeScript config, define CloudNexusStack; research Python 3.12 ARM64 Lambda compatibility. | 22/06/2026 | 22/06/2026 | |
+| 2 (Tue) | Build **Simulation Stack**: create SQS queue (buffered scan requests), DynamoDB table (topology + results), S3 bucket (artifacts), Step Functions state machine (orchestrator), SNS topic (alerts). | 23/06/2026 | 23/06/2026 | |
+| 3 (Wed) | Build **Auth Stack** with Cognito User Pool; build **Secrets Stack**: create Secrets Manager secret for GOOGLE_API_KEY; research Lambda Layer structure for Python dependencies. | 24/06/2026 | 24/06/2026 | |
+| 4 (Thu) | Create **Lambda Layer** for Python 3.12 ARM64: package fastapi, mangum, google-genai, pydantic into proper layer structure; develop Lambda function with FastAPI app + Mangum handler. | 25/06/2026 | 25/06/2026 | |
+| 5 (Fri) | Assemble **API Stack**: configure API Gateway HTTP API, IAM roles, Cognito authorizer; integrate all outputs (bucket names, queue URLs, table ARNs) via CDK context; run `cdk synth` and `cdk deploy` for the first time. | 26/06/2026 | 26/06/2026 | |
 
 ---
 
 ### **Week 11 Achievements**
 
-* Mastered Kubernetes resource management concepts like **Resource Quotas** and **Limit Ranges**.
-* Successfully configured and deployed a **Horizontal Pod Autoscaler (HPA)** using YAML to automatically scale Pods based on CPU load.
-* Mastered and implemented critical Kubernetes security features:
-    * **Network Policies**: Wrote and applied YAML to control network traffic (ingress) between Pods.
-    * **RBAC (Role-Based Access Control)**: Wrote and applied YAML to create **Roles** and **RoleBindings** to manage user permissions.
-* Researched an overview of popular monitoring (**Prometheus**, **Grafana**) and logging (**ELK Stack**, **Fluentd**) stacks for K8s.
-* Mastered and wrote detailed documentation for the **Content-based Routing** feature of AWS Application Load Balancer (ALB).
-* Successfully configured ALB Listener rules to route traffic to different Target Groups based on URL paths (e.g., `/api/*`).
-* Troubleshot and resolved configuration issues (e.g., HPA not scaling, Network Policy not applying).
-* Learned the benefits of and how to enable **HTTP/2** support on an ALB (via an HTTPS listener).
+* Successfully initialized **AWS CDK (TypeScript)** project with `cdk init app --language typescript`, configured `tsconfig.json` and `cdk.json` for the Cloud Nexus project.
+* Built **Simulation Stack** (`CloudNexusSimulationStack`) containing:
+  * **SQS** standard queue as buffer for simulation requests.
+  * **DynamoDB** table with partition key `PK` (topology/results storage).
+  * **S3** bucket for generated topology JSON artifacts.
+  * **Step Functions** state machine orchestrating multi-step simulations.
+  * **SNS** topic for security alert notifications.
+* Built **Secrets Stack** using `aws-cdk-lib/aws-secretsmanager` to create `GOOGLE_API_KEY` secret with auto-generated rotation.
+* Built **Cognito Auth Stack**: User Pool with email/password sign-in, App Client for frontend integration.
+* Developed **Python 3.12 ARM64 Lambda Layer**: created `/python/lib/python3.12/site-packages/` structure containing `fastapi==0.115.0`, `mangum==0.17.0`, `google-genai==1.0.0`, `pydantic==2.9.0`. Configured Lambda function with `architecture: Architecture.ARM_64` and `runtime: Runtime.PYTHON_3_12`.
+* Implemented **FastAPI application** with Mangum handler: defined routes (`/api/health`, `/api/ai/generate`, `/api/topology/validate`, `/api/simulation/scan`, `/api/simulation/run`, `/api/simulation/run-with-defense`), integrated CORS middleware.
+* Built **API Stack** (`CloudNexusApiStack`) with:
+  * **API Gateway HTTP API** with Lambda integration.
+  * **Cognito User Pool Authorizer** for protected endpoints.
+  * **IAM roles** granting Lambda read access to Secrets Manager and full access to SQS, DynamoDB, SNS, Step Functions.
+* Successfully ran `cdk synth` (CloudFormation template generation) and `cdk deploy --all` to deploy all stacks to AWS.
+* Verified all stack outputs (API Gateway URL, S3 bucket name, SQS queue URL, DynamoDB table name, Cognito User Pool ID) for frontend configuration.
