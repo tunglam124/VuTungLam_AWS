@@ -1,121 +1,129 @@
 ---
-title: "Bản Đề Xuất"
+title: "Đề Xuất Dự Án"
 date: "2026-07-04"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-# Cloud Nexus — Đề xuất dự án (Proposal)
+# Cloud Nexus — Đề Xuất Dự Án
 
 ---
 
-## 1. Tổng quan dự án
+## 1. Tổng Quan Dự Án
 
-**Cloud Nexus** là nền tảng mô phỏng và phân tích bảo mật mạng (Threat Modeling Platform) dành cho chuyên gia an ninh mạng và kiến trúc sư hạ tầng. Hệ thống cho phép người dùng thiết kế sơ đồ mạng trực quan, sau đó sử dụng AI (Google Gemini) để tự động phát hiện lỗ hổng, mô phỏng đường đi tấn công, và đề xuất biện pháp phòng thủ.
+**Cloud Nexus** là nền tảng Mô hình hóa Mối đe dọa (Threat Modeling) dành cho các chuyên gia an ninh mạng và kiến trúc sư hạ tầng. Hệ thống cho phép người dùng thiết kế topology mạng trực quan thông qua giao diện kéo-thả, sau đó tận dụng AI (Google Gemini 2.0 Flash) để tự động:
 
-| Thành phần | Công nghệ |
-|-----------|-----------|
+- Tạo topology mạng từ mô tả văn bản
+- Quét lỗ hổng bảo mật và xác định kịch bản tấn công
+- Mô phỏng đường dẫn tấn công với hình ảnh hóa từng bước
+- Đề xuất biện pháp phòng thủ để giảm thiểu rủi ro
+
+### Công Nghệ
+
+| Thành Phần | Công Nghệ |
+|-----------|------------|
 | Frontend | React + Vite + ReactFlow + Tailwind CSS |
 | Backend | FastAPI trên AWS Lambda + API Gateway |
-| AI | Google Gemini API (Gemini 2.0 Flash) |
-| Hạ tầng | AWS CDK (TypeScript), Python 3.12 ARM64 |
-| AWS Services | S3, API Gateway, Lambda, Cognito, DynamoDB, SQS, SNS, Step Functions, Secrets Manager |
+| Engine AI | Google Gemini API (Gemini 2.0 Flash) |
+| Hạ Tầng | AWS CDK (TypeScript), Python 3.12 ARM64 |
+| Dịch Vụ AWS | S3, API Gateway, Lambda, Cognito, DynamoDB, SQS, SNS, Step Functions, Secrets Manager |
 
 ---
 
-## 2. Mục tiêu
+## 2. Mục Tiêu
 
-### Mục tiêu tổng quát
-Xây dựng một nền tảng serverless trên AWS giúp tự động hóa quy trình đánh giá bảo mật mạng, từ vẽ topology đến phát hiện lỗ hổng và mô phỏng tấn công.
+### Mục Tiêu Chung
+Xây dựng nền tảng serverless trên AWS tự động hóa đánh giá bảo mật mạng — từ thiết kế topology đến phát hiện lỗ hổng và mô phỏng tấn công.
 
-### Mục tiêu cụ thể
-- **Output:** REST API endpoints + Web Dashboard (React)
-- **AI Integration:** Google Gemini tạo topology, phân tích lỗ hổng, mô phỏng tấn công
-- **Alert:** SNS notification khi phát hiện tấn công nghiêm trọng
-- **Serverless:** Toàn bộ backend trên Lambda + API Gateway
-- **Infra as Code:** AWS CDK — deploy / destroy bằng 1 lệnh
+### Mục Tiêu Cụ Thể
+- **REST API + Dashboard Web:** Triển khai backend FastAPI trên Lambda với API Gateway, frontend React trên S3 + CloudFront
+- **Tích Hợp AI:** Google Gemini tạo topology mạng, phân tích lỗ hổng, mô phỏng đường dẫn tấn công với các kỹ thuật hacker thực tế
+- **Hình Ảnh Hóa Tấn Công:** Mô phỏng đường dẫn tấn công được animate trên canvas ReactFlow hiển thị từng bước xâm nhập
+- **Đề Xuất Phòng Thủ:** Gợi ý phòng thủ từ AI với khả năng chạy lại mô phỏng sau khi áp dụng biện pháp phòng thủ
+- **Kiến Trúc Serverless:** Toàn bộ backend chạy trên Lambda + API Gateway không cần quản lý server
+- **Hạ Tầng Triển Khai:** AWS CDK cho phép triển khai và hủy bỏ chỉ bằng một lệnh
 
-### Tiêu chí thành công
-1. Web dashboard load được từ S3 static hosting
-2. API Gateway trả về `{"status":"ok"}` tại `/api/health`
-3. Lambda gọi được Google Gemini và trả về topology JSON hợp lệ
-4. Toàn bộ hạ tầng deploy bằng `cdk deploy` và xóa bằng `cdk destroy`
 
 ---
 
-## 3. Vấn đề cần giải quyết
+## 3. Bài Toán
 
-| Vấn đề | Giải pháp |
-|--------|----------|
-| Phát hiện lỗ hổng mạng thủ công tốn thời gian | AI tự động quét topology |
-| Khó hình dung đường đi tấn công | Mô phỏng trực quan trên ReactFlow |
-| Thiết lập môi trường test phức tạp | Serverless trên AWS, không cần quản lý server |
-| Không có công cụ đánh giá phòng thủ | So sánh attack path trước/sau khi thêm defense |
+| Vấn Đề | Giải Pháp |
+|---------|----------|
+| Phát hiện lỗ hổng mạng thủ công tốn thời gian và đòi hỏi chuyên môn sâu | AI tự động quét topology và xác định kịch bản tấn công |
+| Khó hình dung và hiểu đường dẫn tấn công | Mô phỏng trực quan từng bước trên canvas ReactFlow |
+| Cài đặt môi trường thử nghiệm phức tạp đòi hỏi nhiều hạ tầng | Serverless trên AWS Lambda, không cần cấp phát server |
+| Không có cách đánh giá hiệu quả phòng thủ trước khi triển khai | So sánh đường dẫn tấn công trước/sau khi áp dụng biện pháp phòng thủ |
+| Các công cụ truyền thống phức tạp và đòi hỏi đào tạo nhiều | Giao diện kéo-thả trực quan cho thiết kế topology |
 
-### Khách hàng mục tiêu
-- Chuyên gia bảo mật (Security Analysts)
-- Kiến trúc sư hạ tầng (Cloud Architects)
-- Sinh viên học về an ninh mạng (Cybersecurity Students)
-
----
-
-![Architecture Diagram](/images/1783482999271_7294040460361473390_g172388743919642419_7e7bc145b9dbf0b86747b4370039c64b.jpg)
+### Đối Tượng Người Dùng
+- Chuyên gia Phân tích Bảo mật thực hiện đánh giá bảo mật mạng
+- Kiến trúc sư Đám Mây thiết kế hạ tầng đám mây bảo mật
+- Sinh viên An Ninh Mạng học các khái niệm mô hình hóa mối đe dọa
+- Chuyên gia Red Team lập kế hoạch kiểm thử xâm nhập
 
 ---
 
-## 4. Timeline (01/06 → 04/07)
+## 4. Kiến Trúc Hệ Thống
 
-| Giai đoạn | Nội dung | Thời gian |
-|-----------|----------|-----------|
-| **Khởi động** | Thiết lập môi trường, IAM policy, AWS CLI | 01/06 → 04/06 |
-| **Frontend** | Xây dựng UI với React + ReactFlow | 05/06 → 09/06 |
-| **Backend** | FastAPI + AI service + Gemini integration | 10/06 → 14/06 |
-| **Infrastructure** | AWS CDK stacks (Simulation, API, Frontend, Auth) | 15/06 → 19/06 |
-| **Triển khai** | Build Lambda Layer, deploy stacks | 20/06 → 23/06 |
-| **Tích hợp** | Kết nối frontend-backend, cấu hình API key | 24/06 → 27/06 |
-| **Kiểm thử** | Kiểm tra toàn bộ hệ thống, fix bug | 28/06 → 30/06 |
-| **Hoàn thiện** | Báo cáo, tài liệu, dọn dẹp tài nguyên | 01/07 → 04/07 |
+![Kiến Trúc Hệ Thống](/images/2-Proposal/archi.png)
 
 ---
 
-## 5. Ngân sách
+## 5. Lịch Trình (1/6 → 8/7)
 
-### Chi phí AWS (ước tính hàng tháng)
-
-| Service | Chi phí |
-|---------|---------|
-| S3 Static Hosting | ~$0.01 |
-| API Gateway | $0 (free tier) |
-| Lambda | $0 (free tier) |
-| Cognito | $0 (free tier) |
-| DynamoDB | $0 (free tier) |
-| SQS | $0 (free tier) |
-| SNS | $0 (free tier) |
-| Step Functions | $0 (free tier) |
-| Secrets Manager | ~$0.40 |
-| **Tổng** | **~$0.41/tháng** |
-
-### Chi phí Google Gemini API
-- Gemini 2.0 Flash: free tier với rate limit thấp
-- Chi phí phát sinh chỉ khi vượt free tier
-
-### Tổng kết
-Dự án nằm hoàn toàn trong AWS Free Tier + Google Gemini Free Tier, hầu như không phát sinh chi phí vận hành.
+| Giai Đoạn | Nội Dung | Thời Gian |
+|-------|---------|----------|
+| **Giai Đoạn 1: Nền Tảng** | Thiết lập môi trường, cấu hình tài khoản AWS, IAM policies, khung dự án | 1/6 → 4/6 |
+| **Giai Đoạn 2: Phát Triển Frontend** | Xây dựng UI React với canvas ReactFlow, component nodes, giao diện terminal, hệ thống theme | 5/6 → 11/6 |
+| **Giai Đoạn 3: Phát Triển Backend** | Triển khai FastAPI, tích hợp AI service với Gemini, các endpoint API cho tạo/quét/mô phỏng | 12/6 → 18/6 |
+| **Giai Đoạn 4: Hạ Tầng** | CDK stacks cho Lambda, API Gateway, S3, CloudFront, Cognito, Secrets Manager | 19/6 → 24/6 |
+| **Giai Đoạn 5: Tích Hợp & Triển Khai** | Lambda Layer cho dependencies, triển khai stacks, cấu hình API key qua Secrets Manager | 25/6 → 30/6 |
+| **Giai Đoạn 6: Kiểm Thử & Hoàn Thiện** | Kiểm thử end-to-end, sửa lỗi, cải thiện trải nghiệm người dùng, hoàn thiện mô phỏng phòng thủ | 1/7 → 6/7 |
+| **Giai Đoạn 7: Tài Liệu & Hoàn Tất** | Tài liệu dự án, README, tài liệu trình bày, dọn dẹp | 7/7 → 8/7 |
 
 ---
 
-## 6. Rủi ro
+## 6. Ngân Sách
 
-| Rủi ro | Mô tả | Mức độ | Giảm thiểu |
-|--------|-------|--------|------------|
-| **API Key lộ** | Google API key bị commit lên Git | Cao | Secrets Manager + .gitignore |
-| **Chi phí ngoài ý muốn** | Lambda bị gọi liên tục / tấn công | Trung bình | CloudWatch Alarm, budget alert |
-| **AI response lỗi** | Gemini trả về JSON không hợp lệ | Trung bình | Retry logic (2 lần), fallback |
-| **Lambda timeout** | AI response quá chậm (>30s) | Thấp | Tăng timeout, dùng async SQS |
-| **CDK deploy lỗi** | Khác biệt version AWS CDK | Thấp | Pin version, kiểm tra trước khi deploy |
-| **CORS** | Trình duyệt chặn request cross-origin | Thấp | CORS middleware đã cấu hình sẵn |
-| **Dữ liệu bị mất** | DynamoDB bị xóa nhầm | Trung bình | Backup, Point-in-Time Recovery |
+### Chi Phí Hàng Tháng AWS (Ước Tính)
+
+| Dịch Vụ | Free Tier | Chi Phí |
+|---------|-----------|------|
+| S3 Static Hosting | 5 GB | ~$0.01 |
+| API Gateway | 1M calls/tháng | $0 (free tier) |
+| Lambda | 1M requests/tháng | $0 (free tier) |
+| Cognito | 50K MAUs | $0 (free tier) |
+| DynamoDB | 25 GB | $0 (free tier) |
+| SQS | 1M messages/tháng | $0 (free tier) |
+| SNS | 100K notifications | $0 (free tier) |
+| Step Functions | 4K state transitions | $0 (free tier) |
+| Secrets Manager | 1 secret | ~$0.40 |
+| CloudFront | 1TB transfer | $0 (free tier) |
+| **Tổng** | | **~$0.41/tháng** |
+
+### Chi Phí Google Gemini API
+- Gemini 2.0 Flash: Miễn phí với giới hạn sử dụng rộng rãi
+- Chi phí phát sinh chỉ khi vượt quá giới hạn free tier
+
+### Tóm Tắt
+Dự án hoạt động hoàn toàn trong AWS Free Tier + Google Gemini Free Tier, dẫn đến chi phí vận hành gần như bằng không cho phát triển và kiểm thử.
 
 ---
 
-*Tài liệu đề xuất dự án — Cloud Nexus*
+## 7. Đánh Giá Rủi Ro
+
+| Rủi Ro | Mô Tả | Mức Độ | Giảm Thiểu |
+|------|-------------|----------|------------|
+| **Lộ API Key** | Google API key vô tình commit lên Git | Cao | Secrets Manager lưu trữ khóa an toàn; .gitignore ngăn commit; Lambda đọc tại runtime |
+| **Chi Phí Phát Sinh** | Lambda được gọi quá nhiều hoặc bị tấn công | Trung Bình | CloudWatch Alarms, AWS Budget Alerts, giới hạn Lambda concurrency |
+| **Lỗi Response AI** | Gemini trả về JSON không hợp lệ hoặc định dạng bất ngờ | Trung Bình | Retry logic (2 lần) với thông báo lỗi fallback |
+| **Lambda Timeout** | Response AI quá chậm (>30s) | Thấp | Tăng cấu hình timeout; xử lý async qua SQS |
+| **Lỗi Triển Khai CDK** | Phiên bản AWS CDK không khớp giữa các môi trường | Thấp | Pinned CDK version; kiểm tra validation trước triển khai |
+| **Vấn Đề CORS** | Browser chặn các request API cross-origin | Thấp | CORS middleware pre-configured với các origins được cho phép |
+| **Mất Dữ Liệu** | DynamoDB bị xóa nhầm | Trung Bình | Point-in-Time Recovery được bật; backup định kỳ |
+| **Độ Chính Xác Mô Phỏng** | Đường dẫn tấn công do AI tạo có thể không phản ánh kịch bản thực tế | Trung Bình | Thông báo rõ ràng mô phỏng mang tính giáo dục; khuyến nghị review bởi chuyên gia |
+
+---
+
+
